@@ -1,0 +1,33 @@
+#container_games {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#choose_game {
+  font-size: 3rem;
+  transform: translateX(100%);
+  animation: scrolling 15s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.game {
+  width: 26rem;
+  height: 12rem;
+  margin: 1%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
