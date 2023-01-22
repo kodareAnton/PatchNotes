@@ -3,25 +3,26 @@ body {
   padding: 0;
   color: white;
   font-family: "Times New Roman", Times, serif;
-  background: linear-gradient(#cadae0, blue);
+  background: linear-gradient(#000000, rgb(7, 229, 162));
 }
 
 #root {
   height: 100vh;
-  background: linear-gradient(#154ac5, #cadae0);
+  background: linear-gradient(#15c59c, #000000);
 }
 
 #logo {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   border-radius: 100px;
 }
 
 nav {
-  padding: 15px;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background: linear-gradient(#242a28, #252424);
 }
 
 ul {
@@ -43,4 +44,22 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: #154ac5;
+}
+
+#HomeDiv{
+  border-radius: 20px;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  border: 1px solid black;
+  background: linear-gradient(#03271eb1, #383838b8);
+}
+
+#loginBtn{
+  height: 35px;
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(#d59411, #e06315b8);
 }

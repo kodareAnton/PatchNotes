@@ -1,7 +1,10 @@
 export function Home() {
   return (
     <>
-      <h1>MingJunior's Server</h1>
+      
+      <div id="HomeDiv">
+        <h2>Se uppdateringar i ditt favoritspel här!</h2>
+      </div>
     </>
   );
 }

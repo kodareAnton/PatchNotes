@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <nav>
-        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo" />
+        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo"></img>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -25,6 +25,9 @@ function App() {
             <Link to="/Page_Two">Uppdates</Link>
           </li>
         </ul>
+        <button id="loginBtn">
+            <Link to="/Login">Login</Link>
+          </button>
       </nav>
 
       <Routes>
