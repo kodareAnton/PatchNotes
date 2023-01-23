@@ -1,41 +1,37 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export function FortniteNews() {
   interface News {
     status: 200;
 
-
     // interface för Fortnite API'et
     data: {
-
       br: {
-      hash: string;
-      date: string;
-      image: string;
-
-      motds: [
-        {
-          id: string;
-          title: string;
-          tabTitle: string;
-          body: string;
-          image: string;
-          tileImage: string;
-          sortingPriority: string;
-          hidden: boolean;
-        }
-      ];
-
-      messages: [
-        {
-          title: string;
-          body: string;
-          image: string;
-          adspace: string;
-        }
-      ];
-    }
+        hash: string;
+        date: string;
+        image: string;
+        motds: [
+          {
+            id: string;
+            title: string;
+            tabTitle: string;
+            body: string;
+            image: string;
+            tileImage: string;
+            sortingPriority: string;
+            hidden: boolean;
+          }
+        ];
+        messages: [
+          {
+            title: string;
+            body: string;
+            image: string;
+            adspace: string;
+          }
+        ];
+      };
     };
   }
 
@@ -47,7 +43,7 @@ export function FortniteNews() {
 
   useEffect(() => {
     axios
-    .get<News>("https://fortnite-api.com/v2/news")
+      .get<News>('https://fortnite-api.com/v2/news')
       .then((res) => {
         setNews(res.data);
       })
@@ -59,6 +55,7 @@ export function FortniteNews() {
   return (
     <div>
       <h1>{News?.data.br.date}</h1>
+      <p>{News?.data.br.motds[0].title}</p>
       <img src={News?.data.br.image} alt={News?.data.br.image} />
     </div>
   );
