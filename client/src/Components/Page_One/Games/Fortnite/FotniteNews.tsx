@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 export function FortniteNews() {
   interface News {
     status: 200;
+
+
+    // interface för Fortnite API'et
     data: {
+
+      br: {
       hash: string;
       date: string;
       image: string;
@@ -30,12 +35,15 @@ export function FortniteNews() {
           adspace: string;
         }
       ];
+    }
     };
   }
 
   // skriv ut uppdateringar vi https://dash.fortnite-api.com/
   const [News, setNews] = useState<News>();
   console.log(News);
+
+  //
 
   useEffect(() => {
     axios
@@ -50,10 +58,8 @@ export function FortniteNews() {
 
   return (
     <div>
-      <h1>{News?.status}</h1>
-      <p>{News?.data.hash}
-      </p>
-      <img src={News?.data.image} alt={News?.data.image} />
+      <h1>{News?.data.br.date}</h1>
+      <img src={News?.data.br.image} alt={News?.data.br.image} />
     </div>
   );
 }

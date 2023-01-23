@@ -7,8 +7,8 @@ import { FortniteNews } from "./FotniteNews";
 export function Fortnite() {
   return (
     <>
-      <FortniteMap />
       <FortniteNews />
+      <FortniteMap />
     </>
   );
 }
