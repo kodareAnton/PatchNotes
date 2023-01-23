@@ -55,7 +55,6 @@ export function FortniteNews() {
   return (
     <div>
       <h1>{News?.data.br.date}</h1>
-      <p>{News?.data.br.motds[0].title}</p>
       <img src={News?.data.br.image} alt={News?.data.br.image} />
     </div>
   );
