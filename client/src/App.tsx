@@ -9,14 +9,22 @@ import { Page_two } from './Components/Page_Two/Page_Two';
 import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
 import { Login } from './Components/Login/Login';
 import React from 'react';
-import { Camera, Battery } from 'react-feather';
+import { Menu, X } from 'react-feather';
+import { Footer } from './Components/Footer/Footer';
 
 function App() {
+  // öppna meny i mobil läge
+  function OpenMenu() {
+    console.log('hej');
+    return <></>;
+  }
+
   return (
     <>
       <nav>
+        <Menu id="Menu" onClick={OpenMenu} />
         <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo"></img>
-        <ul>
+        <ul id="navText">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -29,6 +37,7 @@ function App() {
           <li id="loginBtn">
             <Link to="/Login">Login</Link>
           </li>
+          <X id="X" />
         </ul>
       </nav>
 
@@ -40,6 +49,8 @@ function App() {
         <Route path="/Page_one/Fortnite" element={<Fortnite />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

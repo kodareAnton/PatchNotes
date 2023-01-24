@@ -1,0 +1,157 @@
+#HamburgerMenu {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(#2f005f, #451c50b8);
+}
+
+#root {
+  height: 100vh;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+ul {
+  margin: 0px;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  background: -webkit-linear-gradient(rgb(238, 197, 13), rgb(214, 137, 54));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: #154ac5;
+}
+
+#HomeDiv {
+  border-radius: 20px;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  border: 1px solid black;
+  background: linear-gradient(#290641, #000000b8);
+}
+
+#loginBtn {
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(#290641, #000000b8);
+}
+
+/* iconer som inte ska synas */
+@media screen and (min-width: 500px) {
+  #Menu {
+    display: none;
+  }
+  #X {
+    display: none;
+  }
+}
+
+/* mobil Läge */
+@media screen and (max-width: 500px) {
+  #HomeDiv {
+    border-radius: 7px;
+    margin: 0;
+    width: 100%;
+    height: 87vh;
+  }
+
+  #loginBtn {
+    background: none;
+  }
+
+  nav {
+    margin-bottom: 10%;
+  }
+
+  #Menu {
+    display: flex;
+    position: absolute;
+    left: 14%;
+  }
+
+  #HamburgerMenu {
+    display: flex;
+    position: absolute;
+    left: 14%;
+    top: 5%;
+  }
+  #HamburgerMenu:hover {
+    background-color: rgba(0, 123, 255, 0.136);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  /* popup nav */
+  #navText {
+    background: linear-gradient(rgb(0, 0, 0), #310346);
+    height: 90%;
+    width: 65%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* display: none; */
+    animation-name: open;
+    animation-duration: 0.3s;
+    animation-direction: normal;
+  }
+
+  #X {
+    size: 100%;
+    position: absolute;
+    right: 32px;
+    top: 18px;
+    animation-duration: 0.3s;
+  }
+
+  #Footer {
+    display: block;
+  }
+
+  /* animationen */
+  @keyframes open {
+    from {
+      width: 0%;
+      font-size: 0px;
+      size: 100%;
+    }
+    to {
+      width: 65%;
+    }
+  }
+}

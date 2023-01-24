@@ -1,5 +1,5 @@
 import './Footer.css';
-import { GitHub } from 'react-feather';
+import { GitHub, Instagram, Linkedin, Mail } from 'react-feather';
 
 export function Footer() {
   return (
@@ -25,13 +25,11 @@ export function Footer() {
       </div>
       <p className="line">|</p>
       <div>
-        <p>
-          {' '}
-          <GitHub />
-          kodare Anton
-        </p>
-
-        <p>MingJunior's Server</p>
+        {' '}
+        <GitHub />
+        <Instagram />
+        <Linkedin />
+        <Mail />
       </div>
     </div>
   );
