@@ -19,12 +19,13 @@ body {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 ul {
   margin: 0px;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Times New Roman", Times, serif;
   display: flex;
   flex-direction: row;
@@ -38,7 +39,7 @@ a {
 }
 
 a:hover {
-  background: -webkit-linear-gradient(rgb(214, 5, 5), rgb(214, 137, 54));
+  background: -webkit-linear-gradient(rgb(238, 197, 13), rgb(214, 137, 54));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: #154ac5;
@@ -50,12 +51,10 @@ a:hover {
   width: 50%;
   text-align: center;
   border: 1px solid black;
-  background: linear-gradient(#03271eb1, #383838b8);
+  background: linear-gradient(#290641, #000000b8);
 }
 
 #loginBtn{
-  height: 35px;
-  padding: 9px 25px;
   border: none;
   border-radius: 50px;
   cursor: pointer;

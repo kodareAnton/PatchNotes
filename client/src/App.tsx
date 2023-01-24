@@ -1,13 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
-import { Layout } from "./Components/Layout/Layout";
-import { Home } from "./Components/Home/Home";
-import { Page_One } from "./Components/Page_One/Page_one";
-import { Page_two } from "./Components/Page_Two/Page_Two";
-import { Fortnite } from "./Components/Page_One/Games/Fortnite/Fortnite";
-import { Login } from "./Components/Login/Login";
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import { Layout } from './Components/Layout/Layout';
+import { Home } from './Components/Home/Home';
+import { Page_One } from './Components/Page_One/Page_one';
+import { Page_two } from './Components/Page_Two/Page_Two';
+import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
+import { Login } from './Components/Login/Login';
+import React from 'react';
+import { Camera, Battery } from 'react-feather';
 
 function App() {
   return (
@@ -19,15 +21,15 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/Page_One">Games</Link>
+            <Link to="/Page_One"> Games</Link>
           </li>
           <li>
-            <Link to="/Page_Two">Uppdates</Link>
+            <Link to="/Page_Two">Review</Link>
+          </li>
+          <li id="loginBtn">
+            <Link to="/Login">Login</Link>
           </li>
         </ul>
-        <button id="loginBtn">
-            <Link to="/Login">Login</Link>
-          </button>
       </nav>
 
       <Routes>
