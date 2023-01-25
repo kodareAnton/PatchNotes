@@ -125,7 +125,7 @@ a:hover {
     left: 0%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    /* display: none; */
+    display: none;
     animation-name: open;
     animation-duration: 0.3s;
     animation-direction: normal;

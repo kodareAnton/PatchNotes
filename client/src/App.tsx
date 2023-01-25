@@ -15,8 +15,13 @@ import { Footer } from './Components/Footer/Footer';
 function App() {
   // öppna meny i mobil läge
   function OpenMenu() {
-    console.log('hej');
-    return <></>;
+    var NavText = document.getElementById('navText')
+    NavText.style.display = 'flex' 
+  }
+
+  function closeMenu(){
+    var NavText = document.getElementById('navText')
+    NavText.style.display = 'none'
   }
 
   return (
@@ -37,7 +42,7 @@ function App() {
           <li id="loginBtn">
             <Link to="/Login">Login</Link>
           </li>
-          <X id="X" />
+          <X id="X" onClick={closeMenu} />
         </ul>
       </nav>
 
