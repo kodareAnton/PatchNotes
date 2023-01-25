@@ -2,13 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Fortnite.css";
 import { FortniteMap } from "./FortniteMap";
-import { FortniteShop } from "./FotniteShop";
+import { FortniteNews } from "./FotniteNews";
 
 export function Fortnite() {
   return (
     <>
+      <FortniteNews />
       <FortniteMap />
-      <FortniteShop />
     </>
   );
 }

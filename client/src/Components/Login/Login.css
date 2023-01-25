@@ -8,14 +8,17 @@
   background-position: center;
   background-size: cover;
   position: relative;
-}
-
-form {
-  margin-left: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
   height: 50vh;
-  background-color: rgba(255, 255, 255, 0.592);
+  background-color: rgba(16, 6, 39, 0.9);
 }

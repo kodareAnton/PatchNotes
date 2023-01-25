@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import "./Page_One.css";
+import { useNavigate } from 'react-router-dom';
+import './Page_One.css';
 
 export function Page_One() {
   const navigate = useNavigate();
   function redirect() {
-    console.log("hej");
-    navigate("/Page_one/Fortnite");
+    console.log('hej');
+    navigate('/Page_one/Fortnite');
   }
 
   return (

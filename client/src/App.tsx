@@ -1,29 +1,48 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
-import { Layout } from "./Components/Layout/Layout";
-import { Home } from "./Components/Home/Home";
-import { Page_One } from "./Components/Page_One/Page_one";
-import { Page_two } from "./Components/Page_Two/Page_Two";
-import { Fortnite } from "./Components/Page_One/Games/Fortnite/Fortnite";
-import { Login } from "./Components/Login/Login";
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import { Layout } from './Components/Layout/Layout';
+import { Home } from './Components/Home/Home';
+import { Page_One } from './Components/Page_One/Page_one';
+import { Page_two } from './Components/Page_Two/Page_Two';
+import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
+import { Login } from './Components/Login/Login';
+import React from 'react';
+import { Menu, X } from 'react-feather';
+import { Footer } from './Components/Footer/Footer';
 
 function App() {
+  // öppna meny i mobil läge
+  function OpenMenu() {
+    var NavText = document.getElementById('navText')
+    NavText.style.display = 'flex' 
+  }
+
+  function closeMenu(){
+    var NavText = document.getElementById('navText')
+    NavText.style.display = 'none'
+  }
+
   return (
     <>
       <nav>
-        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo" />
-        <ul>
+        <Menu id="Menu" onClick={OpenMenu} />
+        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo"></img>
+        <ul id="navText">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/Page_One">Games</Link>
+            <Link to="/Page_One"> Games</Link>
           </li>
           <li>
-            <Link to="/Page_Two">Uppdates</Link>
+            <Link to="/Page_Two">Review</Link>
           </li>
+          <li id="loginBtn">
+            <Link to="/Login">Login</Link>
+          </li>
+          <X id="X" onClick={closeMenu} />
         </ul>
       </nav>
 
@@ -35,6 +54,8 @@ function App() {
         <Route path="/Page_one/Fortnite" element={<Fortnite />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
