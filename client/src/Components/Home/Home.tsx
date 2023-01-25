@@ -1,16 +1,27 @@
 import './Home.css';
 
 export function Home() {
+  const navigateToLogin = () => {
+    window.location.replace('/Login');
+  };
+
+  const navigateToGames = () => {
+    window.location.replace('/Page_One');
+  };
+
   return (
     <>
       <div className="placementDiv">
         <div id="HomeDiv">
-          <h2>Updateringar!</h2>
+          <h2>Updates</h2>
           <p>
-            lalalala lal lal al la lal llllalala lalalalalalal l all ll la lal{' '}
+            {' '}
+            Follow your favorite games and its new updates here on my site.
+            Create an account so you can save your favorite games and easy keep
+            track on what new patchnotes and events thats coming up.{' '}
           </p>
-          <button>Login</button>
-          <button>Updates</button>
+          <button onClick={navigateToLogin}>Login</button>
+          <button onClick={navigateToGames}>Updates</button>
         </div>
       </div>
 

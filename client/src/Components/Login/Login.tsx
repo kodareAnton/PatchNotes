@@ -1,5 +1,6 @@
-import { stripBasename } from '@remix-run/router';
+import { redirect, stripBasename } from '@remix-run/router';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 export function Login() {
@@ -8,7 +9,18 @@ export function Login() {
 
   const LoggaIn = (e: any) => {
     e.preventDefault();
-    localStorage.setItem(Name, Password);
+    console.log('Username', Name);
+    localStorage.setItem('Username', Name);
+
+    var getLocalStorage = localStorage.getItem('Username');
+
+    if ((getLocalStorage = '')) {
+      console.log('Fail Login');
+      return;
+    } else {
+      console.log('Login susses');
+      window.location.replace('/Home');
+    }
   };
 
   return (
@@ -27,7 +39,7 @@ export function Login() {
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input type="submit" />
+        <input className="btn" type="submit" />
       </form>
     </div>
   );

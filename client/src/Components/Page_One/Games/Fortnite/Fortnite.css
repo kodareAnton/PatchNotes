@@ -1,5 +1,18 @@
-#Map {
-  height: 40rem;
-  width: 40rem;
+#FotniteMap {
+  background-color: rgba(0, 0, 0, 0.603);
 }
 
+.map {
+  height: 30rem;
+  width: 30rem;
+}
+
+#news {
+  background-color: rgba(0, 0, 0, 0.658);
+  width: 100%;
+}
+
+img {
+  height: 30rem;
+  width: 50rem;
+}

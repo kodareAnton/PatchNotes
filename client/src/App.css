@@ -5,6 +5,8 @@
 * {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  /* margin: 0;
+  padding: 0; */
 }
 
 body {
@@ -165,6 +167,7 @@ a:hover {
     animation-name: open;
     animation-duration: 0.3s;
     animation-direction: normal;
+    z-index: 1;
   }
 
   #X {
