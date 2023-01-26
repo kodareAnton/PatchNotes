@@ -39,7 +39,7 @@ export function Login() {
     // inloggning
     if (User.name === Users[0].name && User.password === Users[0].password) {
       console.log('cool');
-      localStorage.setItem('userId', User.id);
+      localStorage.setItem('userId', 'anton');
     } else {
       console.log('not cool');
     }
