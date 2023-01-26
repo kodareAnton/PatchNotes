@@ -42,6 +42,7 @@ function App() {
           <li id="loginBtn">
             <Link to="/Login">Login</Link>
           </li>
+          
           <X id="X" onClick={closeMenu} />
         </ul>
       </nav>

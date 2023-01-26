@@ -12,9 +12,9 @@ export function Login() {
     console.log('Username', Name);
     localStorage.setItem('Username', Name);
 
-    var getLocalStorage = localStorage.getItem('Username');
+    var getLocalStorageId = localStorage.getItem('Username');
 
-    if ((getLocalStorage = '')) {
+    if ((getLocalStorageId === '')) {
       console.log('Fail Login');
       return;
     } else {

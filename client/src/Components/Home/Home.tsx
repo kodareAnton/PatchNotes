@@ -9,10 +9,27 @@ export function Home() {
     window.location.replace('/Page_One');
   };
 
+
+  // hämtar hem användaren efter localstorage
+  var getLocalStorageId = localStorage.getItem('Username');
+
+  if ((getLocalStorageId === '' )) {
+    console.log('inte inloggad');
+    return;
+  } else {
+    console.log('success logged name');
+    var loggedForm = 
+    <div id='UserLoggedInProfil'>
+      {/* <img src="" alt="" /> */}
+    <h1>{getLocalStorageId}</h1>
+    </div>
+  }
+
   return (
     <>
       <div className="placementDiv">
         <div id="HomeDiv">
+          {loggedForm}
           <h2>Updates</h2>
           <p>
             {' '}
