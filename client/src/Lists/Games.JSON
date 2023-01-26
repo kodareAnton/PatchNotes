@@ -1,5 +1,19 @@
 {
-    "Name": "Fornite",
-    "src": "img/Fortnite.jpg",
-    "favorite": false
+  "User": [
+    {
+      "UserId": "1",
+      "Username": "Anton",
+      "Passowrd": "123",
+      "src": "img/Fortnite.jpg"
+    }
+  ],
+
+  "Games": [
+    {
+      "id": 1,
+      "Name": "Fornite",
+      "src": "img/Fortnite.jpg",
+      "favorite": false
+    }
+  ]
 }

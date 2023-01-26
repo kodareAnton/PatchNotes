@@ -39,8 +39,7 @@ export function FortniteNews() {
   const [News, setNews] = useState<News>();
   console.log(News);
 
-  //
-
+  // hämtar från Fortnite Api
   useEffect(() => {
     axios
       .get<News>('https://fortnite-api.com/v2/news')
@@ -53,9 +52,11 @@ export function FortniteNews() {
   }, []);
 
   return (
-    <div>
-      <h1>{News?.data.br.date}</h1>
-      <img src={News?.data.br.image} alt={News?.data.br.image} />
+    <div id="news">
+      <div className="contentInNews">
+        <h1>{News?.data.br.date.slice(0, -10)}</h1>
+        <img src={News?.data.br.image} alt={News?.data.br.image} />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import "./Fortnite.css";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import './Fortnite.css';
 
 export function FortniteMap() {
   const [Map, setMap] = useState<Map>();
@@ -26,7 +26,7 @@ export function FortniteMap() {
 
   useEffect(() => {
     axios
-      .get<Map>("https://fortnite-api.com/v1/map")
+      .get<Map>('https://fortnite-api.com/v1/map')
       .then((res) => {
         setMap(res.data);
       })
@@ -36,9 +36,13 @@ export function FortniteMap() {
   }, []);
 
   return (
-    <>
+    <div id="FotniteMap">
       <h1>Fortnite BR map right now!</h1>
-      <img id="Map" src={Map?.data.images.blank} alt={Map?.data.images.blank} />
-    </>
+      <img
+        className="map"
+        src={Map?.data.images.blank}
+        alt={Map?.data.images.blank}
+      />
+    </div>
   );
 }

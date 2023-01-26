@@ -1,24 +1,39 @@
 #Login {
-  position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: url("img/Super.jpg");
-  background-repeat: no-repeat;
-  background-color: #cccccc;
-  background-position: center;
-  background-size: cover;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 form {
+  padding: 2%;
+ 
+  border-radius: 20px;
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.63);
+ 
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+
   height: 50vh;
-  background-color: rgba(16, 6, 39, 0.9);
+  
+  border-radius: 10px;
+}
+
+.btn {
+  height: 25px;
+  color: rgb(255, 255, 255);
+  border: none;
+  margin: 1%;
+  background: linear-gradient(rgb(19, 131, 9), rgb(17, 18, 56));
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(rgb(116, 114, 114), rgb(0, 0, 0));
 }
