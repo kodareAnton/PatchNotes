@@ -44,15 +44,15 @@ export function Home() {
       <div className="HomeCards">
         <div className="HomeCard">
           <h2>News1</h2>
-          <p>bababababababababab vbababa ba bababab aaba babab abab abab </p>
+          <p>babababa vbababa ba bababab aaba babab abab abab </p>
         </div>
         <div className="HomeCard">
           <h2>News2</h2>
-          <p>bababababababababab vbababa ba bababab aaba babab abab abab </p>
+          <p>baba vbababa ba bababab aaba babab abab abab </p>
         </div>
         <div className="HomeCard">
           <h2>News3</h2>
-          <p>bababababababababab vbababa ba bababab aaba babab abab abab </p>
+          <p>bababababab vbababa ba bababab aaba babab abab abab </p>
         </div>
       </div>
     </>
