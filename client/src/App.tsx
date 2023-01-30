@@ -15,13 +15,13 @@ import { Footer } from './Components/Footer/Footer';
 function App() {
   // öppna meny i mobil läge
   function OpenMenu() {
-    var NavText = document.getElementById('navText')
-    NavText.style.display = 'flex' 
+    var NavText = document.getElementById('navText');
+    NavText.style.display = 'flex';
   }
 
-  function closeMenu(){
-    var NavText = document.getElementById('navText')
-    NavText.style.display = 'none'
+  function closeMenu() {
+    var NavText = document.getElementById('navText');
+    NavText.style.display = 'none';
   }
 
   return (
@@ -36,13 +36,13 @@ function App() {
           <li>
             <Link to="/Page_One"> Games</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Page_Two">Review</Link>
-          </li>
+          </li> */}
           <li id="loginBtn">
             <Link to="/Login">Login</Link>
           </li>
-          
+
           <X id="X" onClick={closeMenu} />
         </ul>
       </nav>
