@@ -9,6 +9,7 @@ export function Login() {
   const [Password, setPassword] = useState('');
 
   const LoggaIn = (e: any) => {
+
     const User = {
       id: 3,
       name: Name,
@@ -18,7 +19,7 @@ export function Login() {
       {
         id: 1,
         name: 'Anton',
-        password: 'test',
+        password: 'mam',
       },
       {
         id: 2,
@@ -40,6 +41,7 @@ export function Login() {
     if (User.name === Users[0].name && User.password === Users[0].password) {
       console.log('cool');
       localStorage.setItem('userId', JSON.stringify(User.id));
+   
     } else {
       console.log('not cool');
     }
@@ -57,7 +59,7 @@ export function Login() {
 
         <label>Lössenord:</label>
         <input
-          type="text"
+          type="password"
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
