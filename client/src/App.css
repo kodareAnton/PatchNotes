@@ -22,6 +22,7 @@ button {
   color: rgb(255, 255, 255);
   border: none;
   margin: 1%;
+  border-radius: 2px;
   background: linear-gradient(rgb(19, 131, 9), rgb(17, 18, 56));
 }
 

@@ -27,7 +27,7 @@
 
 .HomeCards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 5%;
 }
 
@@ -36,11 +36,9 @@
   padding: 2%;
   border-radius: 10px;
   background: linear-gradient(rgb(0, 0, 0), rgb(17, 41, 20));
-  /* border: 1px solid yellow; */
-  height: 300px;
-  width: 300px;
+  width: 15%;
 }
 
 .HomeCard:hover {
-  filter: drop-shadow(10px 10px 4px #ffffff25);
+  filter: drop-shadow(10px 10px 4px #2bff0033);
 }
