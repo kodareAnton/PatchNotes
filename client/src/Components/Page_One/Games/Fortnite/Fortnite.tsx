@@ -6,30 +6,31 @@ import { FortniteNews } from './FotniteNews';
 
 export function Fortnite() {
   const API = [
-    { name: 'AES / Advanced Encryption Standard', about: '' },
-    { name: 'Banners', about: 'banner art' },
-    { name: 'Cosmeticts', about: '' },
-    { name: 'Creator Code', about: '' },
-    { name: 'Map', about: '' },
-    { name: 'News', about: '' },
-    { name: 'Playlists', about: '' },
-    { name: 'Shop', about: '' },
-    { name: 'Stats', about: '' },
+    { name: 'AES / Advanced Encryption Standard', isClicked: false },
+    { name: 'Banners', isClicked: false },
+    { name: 'Cosmeticts', isClicked: false },
+    { name: 'Creator Code', isClicked: false },
+    { name: 'Map', place: <FortniteNews />, isClicked: false },
+    { name: 'News', place: <FortniteMap />, isClicked: false },
+    { name: 'Playlists', isClicked: false },
+    { name: 'Shop', isClicked: false },
+    { name: 'Stats', isClicked: false },
   ];
 
-  const randomColor = Math.floor(Math.random() * 251);
   const randomColor1 = Math.floor(Math.random() * 251);
   const randomColor2 = Math.floor(Math.random() * 251);
-  console.log(randomColor, randomColor1, randomColor2);
+
+  function IsClicked() {
+    console.log();
+  }
 
   const APIList = API.map((list) => (
-    <div key={list.name}>
+    <div key={list.name} onClick={IsClicked}>
       <p
+        id="random"
         style={{
-          color: `rgba(${randomColor},${randomColor1},${randomColor2})`,
-          border: `1px solid rgba(${randomColor},${randomColor1},${randomColor2} `,
-          backgroundColor: 'rgba(0, 0, 0, 0.658)',
-          borderRadius: '10px',
+          color: `rgba(255,${randomColor1},${randomColor2})`,
+          border: `1px solid rgba(255,${randomColor1},${randomColor2} `,
         }}
       >
         {list.name}
@@ -37,13 +38,11 @@ export function Fortnite() {
     </div>
   ));
 
-  console.log(APIList);
-
   return (
     <>
+      <div id="randomDiv">{APIList}</div>
       {/* <FortniteNews />
       <FortniteMap /> */}
-      {APIList}
     </>
   );
 }

@@ -9,6 +9,11 @@ export function Home() {
     window.location.replace('/Page_One');
   };
 
+  const cleanLocalStorage = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   // hämtar hem användaren efter localstorage
   var getLocalStorageId = localStorage.getItem('userId');
 
@@ -44,6 +49,8 @@ export function Home() {
               Weclome to your site! follow your favoirit games and see whats
               happening in them right now!{' '}
             </p>
+
+            <button onClick={cleanLocalStorage}>Logout</button>
           </div>
         </div>
 
