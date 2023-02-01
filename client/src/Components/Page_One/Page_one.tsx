@@ -19,9 +19,11 @@ export function Page_One() {
       <div id="container_games">
         <div className="game" onClick={redirect}>
           <img src="img/Fortnite.jpg"></img>
+          <button>Add To Favorite</button>
         </div>
         <div className="game" onClick={redirectValorant}>
           <img src="img/Valorant.png"></img>
+          <button>Add To Favorite</button>
         </div>
         {/* <div className="game">
           <img src="img/Apex.jpg"></img>

@@ -2,19 +2,20 @@
   background-color: rgba(0, 0, 0, 0.603);
 }
 
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
 .map {
-  height: 30rem;
-  width: 30rem;
+  /* height: 30rem;
+  width: 30rem; */
 }
 
 #news {
   background-color: rgba(0, 0, 0, 0.658);
   width: 100%;
-}
-
-.contentInNews {
-  height: 40%;
-  width: 40%;
 }
 
 #randomDiv {
@@ -34,4 +35,11 @@
 #random:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.ForniteIcons {
+  border: 1px solid rgb(3, 136, 54);
+  margin: 2px;
+  width: auto;
+  height: auto;
 }

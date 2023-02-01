@@ -37,7 +37,7 @@ export function Login() {
     // inloggning
     if (User.name === 'Anton' && User.password === '123') {
       console.log('cool');
-      localStorage.setItem('userId', JSON.stringify(User.id));
+      localStorage.setItem('userId', User.name);
       window.location.replace('/');
     } else {
       console.log('not cool');
