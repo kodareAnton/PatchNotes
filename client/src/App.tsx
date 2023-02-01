@@ -54,10 +54,6 @@ function App() {
         <Route path="/Page_one" element={<Page_One />} />
         <Route path="/Page_Two" element={<Page_two />} />
         <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
-        {/* <Route
-          path="/Page_one/Fortnite/FortniteNews"
-          element={<FortniteNews />}
-        /> */}
         <Route path="/Login" element={<Login />} />
       </Routes>
 

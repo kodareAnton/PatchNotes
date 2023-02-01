@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './Fortnite.css';
 import { FortniteBanners } from './FortniteBanners';
+import { FortniteCosmetics } from './FortniteCosmetics';
 import { FortniteMap } from './FortniteMap';
 import { FortniteShop } from './FortntiteShop';
 import { FortniteNews } from './FotniteNews';
@@ -17,7 +18,11 @@ export function Fortnite() {
   const API = [
     { id: 0, name: 'AES/Advanced Encryption Standard', link: 'AES' },
     { id: 1, name: 'Banners', link: 'Banners', content: <FortniteBanners /> },
-    { id: 2, name: 'Cosmeticts', link: 'CosmetictsS' },
+    {
+      id: 2,
+      name: 'Cosmeticts',
+      content: <FortniteCosmetics />,
+    },
     { id: 3, name: 'CreatorCode', link: 'CreatorCode' },
     { id: 4, name: 'Map', link: 'FortniteMap', content: <FortniteMap /> },
     { id: 5, name: 'News', link: 'News', content: <FortniteNews /> },
