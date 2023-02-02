@@ -29,7 +29,7 @@ function App() {
     <>
       <nav>
         <Menu id="Menu" onClick={OpenMenu} />
-        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo"></img>
+        <img src="img/logoPokemon.png" alt="ChrismasLogo" id="logo"></img>
         <ul id="navText">
           <li>
             <Link to="/">Home</Link>
