@@ -6,7 +6,7 @@ const { ObjectId } = require("mongodb");
 // Får användare från datorbas
 router.get("/", function (req, res, next) {
   req.app.locals.db
-    .collection("users")
+    .collection("GameNames")
     .find()
     .toArray()
     .then((results) => {
@@ -19,8 +19,7 @@ router.get("/", function (req, res, next) {
           results[user].username +
           "</h2>" +
           "<p>" +
-          "Prenumerationsstatus: " +
-          results[user].subscribe +
+          results[user].password +
           "</p>";
       }
       printUsers += "</div>";
@@ -32,7 +31,7 @@ router.get("/", function (req, res, next) {
 
 router.post("/user", function (req, res, next) {
   req.app.locals.db
-    .collection("users")
+    .collection("GameNames")
     .findOne({ _id: ObjectId(req.body._id) })
     .then((results) => {
       res.json(results);
@@ -40,10 +39,10 @@ router.post("/user", function (req, res, next) {
 });
 
 // hämtar users till frontend
-router.post("/loggin", function (req, res, next) {
+router.post("/login", function (req, res, next) {
   console.log(req.body);
   req.app.locals.db
-    .collection("users")
+    .collection("GameNames")
     .findOne({ username: req.body.username, password: req.body.password })
     .then((results) => {
       res.json(results);
@@ -53,7 +52,7 @@ router.post("/loggin", function (req, res, next) {
 // Pushar en ny användare
 router.post("/add", function (req, res) {
   req.app.locals.db
-    .collection("users")
+    .collection("GameNames")
     .insertOne(req.body)
     .then((result) => {
       console.log(result);
@@ -67,7 +66,7 @@ router.put("/:id", function (req, res) {
   console.log(req.body.subscribe);
   try {
     req.app.locals.db
-      .collection("users")
+      .collection("GameNames")
       .findOneAndUpdate(
         { username: req.body.username },
         { $set: { subscribe: req.body.subscribe } }

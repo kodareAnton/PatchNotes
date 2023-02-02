@@ -4,6 +4,7 @@ import './Fortnite.css';
 
 export function FortniteMap() {
   const [Map, setMap] = useState<Map>();
+  console.log(Map);
 
   interface Map {
     data: {
@@ -37,7 +38,6 @@ export function FortniteMap() {
 
   return (
     <div id="FotniteMap">
-      <h1>Fortnite BR map right now!</h1>
       <img
         className="map"
         src={Map?.data.images.blank}

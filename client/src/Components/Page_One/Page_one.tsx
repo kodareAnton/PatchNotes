@@ -8,17 +8,24 @@ export function Page_One() {
     navigate('/Page_one/Fortnite');
   }
 
+  function redirectValorant() {
+    console.log('hej');
+    navigate('/Page_one/Valorant');
+  }
+
   return (
     <>
       <h1 id="choose_game">Välj ett spel!</h1>
       <div id="container_games">
         <div className="game" onClick={redirect}>
           <img src="img/Fortnite.jpg"></img>
+          <button>Add To Favorite</button>
         </div>
-        <div className="game">
+        <div className="game" onClick={redirectValorant}>
           <img src="img/Valorant.png"></img>
+          <button>Add To Favorite</button>
         </div>
-        <div className="game">
+        {/* <div className="game">
           <img src="img/Apex.jpg"></img>
         </div>
         <div className="game">
@@ -35,7 +42,7 @@ export function Page_One() {
         </div>
         <div className="game">
           <img src="img/VampireBloodhunt.jpg"></img>
-        </div>
+        </div> */}
       </div>
     </>
   );

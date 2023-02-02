@@ -9,7 +9,6 @@ export function Login() {
   const [Password, setPassword] = useState('');
 
   const LoggaIn = (e: any) => {
-
     const User = {
       id: 3,
       name: Name,
@@ -35,15 +34,18 @@ export function Login() {
     // hämtat localStorage
     var getLocalStorageId = JSON.parse(localStorage.getItem('User') || '[]');
 
-    console.log(getLocalStorageId);
-
     // inloggning
-    if (User.name === Users[0].name && User.password === Users[0].password) {
+    if (User.name === 'Anton' && User.password === '123') {
       console.log('cool');
-      localStorage.setItem('userId', JSON.stringify(User.id));
-   
+      localStorage.setItem('userId', User.name);
+      window.location.replace('/');
     } else {
       console.log('not cool');
+      return (
+        <>
+          <p>Username or Password not found</p>
+        </>
+      );
     }
   };
 

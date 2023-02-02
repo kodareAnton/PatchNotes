@@ -11,24 +11,25 @@ import { Login } from './Components/Login/Login';
 import React from 'react';
 import { Menu, X } from 'react-feather';
 import { Footer } from './Components/Footer/Footer';
+import { FortniteNews } from './Components/Page_One/Games/Fortnite/FotniteNews';
 
 function App() {
   // öppna meny i mobil läge
   function OpenMenu() {
-    var NavText = document.getElementById('navText')
-    NavText.style.display = 'flex' 
+    var NavText: any = document.getElementById('navText');
+    NavText.style.display = 'flex';
   }
 
-  function closeMenu(){
-    var NavText = document.getElementById('navText')
-    NavText.style.display = 'none'
+  function closeMenu() {
+    var NavText: any = document.getElementById('navText');
+    NavText.style.display = 'none';
   }
 
   return (
     <>
       <nav>
         <Menu id="Menu" onClick={OpenMenu} />
-        <img src="img/Logo-regular.jpg" alt="ChrismasLogo" id="logo"></img>
+        <img src="img/logoPokemon.png" alt="ChrismasLogo" id="logo"></img>
         <ul id="navText">
           <li>
             <Link to="/">Home</Link>
@@ -36,13 +37,13 @@ function App() {
           <li>
             <Link to="/Page_One"> Games</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Page_Two">Review</Link>
-          </li>
+          </li> */}
           <li id="loginBtn">
             <Link to="/Login">Login</Link>
           </li>
-          
+
           <X id="X" onClick={closeMenu} />
         </ul>
       </nav>
@@ -52,7 +53,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Page_one" element={<Page_One />} />
         <Route path="/Page_Two" element={<Page_two />} />
-        <Route path="/Page_one/Fortnite" element={<Fortnite />} />
+        <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
 
