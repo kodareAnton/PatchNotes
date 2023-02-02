@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Router, Routes } from 'react-router-dom';
 import { Layout } from './Components/Layout/Layout';
 import { Home } from './Components/Home/Home';
 import { Page_One } from './Components/Page_One/Page_one';
@@ -55,6 +55,7 @@ function App() {
         <Route path="/Page_Two" element={<Page_two />} />
         <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="*" />
       </Routes>
 
       <Footer />

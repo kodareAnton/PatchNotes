@@ -16,7 +16,7 @@ export function Fortnite() {
     content?: any;
   }
   const API = [
-    { id: 0, name: 'AES/Advanced Encryption Standard', link: 'AES' },
+    { id: 0, name: 'AES', link: 'AES' },
     { id: 1, name: 'Banners', link: 'Banners', content: <FortniteBanners /> },
     {
       id: 2,
