@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+
 import './App.css';
 import { Link, Route, Router, Routes } from 'react-router-dom';
 import { Layout } from './Components/Layout/Layout';
@@ -11,7 +10,7 @@ import { Login } from './Components/Login/Login';
 import React from 'react';
 import { Menu, X } from 'react-feather';
 import { Footer } from './Components/Footer/Footer';
-import { FortniteNews } from './Components/Page_One/Games/Fortnite/FotniteNews';
+
 
 function App() {
   // öppna meny i mobil läge
@@ -58,7 +57,6 @@ function App() {
         <Route path="*" />
       </Routes>
 
-      <Footer />
     </>
   );
 }
