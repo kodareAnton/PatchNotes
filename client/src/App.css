@@ -59,6 +59,7 @@ ul {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
   gap: 10px;

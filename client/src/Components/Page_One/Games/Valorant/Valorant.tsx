@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ValorantMaps } from './ValorantMaps';
+import './Valorant.css';
 
 export function Valorant() {
   const API = [
@@ -9,23 +10,23 @@ export function Valorant() {
       id: 2,
       name: 'Bundles', link: 'ValorantBundles',
     },
-    { id: 3, name: 'Cermonies'},
-    { id: 4, name: 'Competitive_Tiers'},
-    { id: 5, name: 'Cuntent_Tiers'},
-    { id: 6, name: 'Contracts' },
-    { id: 7, name: 'Currencies'},
-    { id: 8, name: 'Events'},
-    { id: 9, name: 'Gamemodes'},
-    { id: 10, name: 'Gear'},
-    { id: 11, name: 'Level_Borders'},
-    { id: 12, name: 'Maps', Link: 'ValorantMaps'},
-    { id: 13, name: 'Player_Cards'},
-    { id: 14, name: 'Players_Titles'},
-    { id: 15, name: 'Seasons'},
-    { id: 16, name: 'Sprays'},
-    { id: 17, name: 'Themes'},
-    { id: 18, name: 'Weapons'},
-    { id: 19, name: 'Version'},
+    { id: 3, name: 'Cermonies', link: 'ValorantCermonies'},
+    { id: 4, name: 'Competitive_Tiers', link: 'ValorantCompetitive_Tiers'},
+    { id: 5, name: 'Cuntent_Tiers' , link: 'ValorantCuntent_Tiers'},
+    { id: 6, name: 'Contracts', link: 'ValorantContracts' },
+    { id: 7, name: 'Currencies' , link: 'ValorantCurrencies'},
+    { id: 8, name: 'Events', link: 'ValorantEvents'},
+    { id: 9, name: 'Gamemodes', link: 'ValorantGamemodes'},
+    { id: 10, name: 'Gear', link: 'ValorantGear'},
+    { id: 11, name: 'Level_Borders', link: 'ValorantLevel_Borders'},
+    { id: 12, name: 'Maps', link: 'ValorantMaps'},
+    { id: 13, name: 'Player_Cards', link: 'ValorantPlayer_Cards'},
+    { id: 14, name: 'Players_Titles', link: 'ValorantPlayers_Titles'},
+    { id: 15, name: 'Seasons', link: 'ValorantSeasons'},
+    { id: 16, name: 'Sprays', link: 'ValorantSprays'},
+    { id: 17, name: 'Themes', link: 'ValorantThemes'},
+    { id: 18, name: 'Weapons', link: 'ValorantWeapons'},
+    { id: 19, name: 'Version', link: 'ValorantVersion'},
   ];
 
   // skriver ut all undermenyer som tillhör spelet med en map function
@@ -45,7 +46,7 @@ export function Valorant() {
         >
           <Link style={{
             color: `rgba(255,${randomColor1},${randomColor2})`,
-          }} to={`/Page_one/Valorant/${list.Link}`}>{list.name}</Link>
+          }} to={`/Page_one/Valorant/${list.link}`}>{list.name}</Link>
         </li>
       </div>
     );

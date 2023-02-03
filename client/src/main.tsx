@@ -8,6 +8,7 @@ import { Footer } from './Components/Footer/Footer';
 import { Login } from './Components/Login/Login';
 import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
 import { Valorant } from './Components/Page_One/Games/Valorant/Valorant';
+import { ValorantBuddys } from './Components/Page_One/Games/Valorant/ValorantBuddys';
 import { ValorantMaps } from './Components/Page_One/Games/Valorant/ValorantMaps';
 import { Page_One } from './Components/Page_One/Page_one';
 import { Page_two } from './Components/Page_Two/Page_Two';
@@ -28,8 +29,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/Login" element={<Login />} /> */}
         <Route path="/Page_one/Valorant" element={<Valorant />} />
         <Route
-          path="/Page_one/Valorant/:id"
+          path="/Page_one/Valorant/ValorantMaps"
           element={<ValorantMaps />}
+        />
+         <Route
+          path="/Page_one/Valorant/ValorantBuddys"
+          element={<ValorantBuddys />}
         />
          <Route path="*" />
       </Routes>
