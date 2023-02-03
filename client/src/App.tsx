@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Link, Route, Router, Routes } from 'react-router-dom';
 import { Layout } from './Components/Layout/Layout';
@@ -10,7 +9,6 @@ import { Login } from './Components/Login/Login';
 import React from 'react';
 import { Menu, X } from 'react-feather';
 import { Footer } from './Components/Footer/Footer';
-
 
 function App() {
   // öppna meny i mobil läge
@@ -52,11 +50,8 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Page_one" element={<Page_One />} />
         <Route path="/Page_Two" element={<Page_two />} />
-        <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="*" />
       </Routes>
-
     </>
   );
 }

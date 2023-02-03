@@ -1,14 +1,24 @@
-
 /* styling för css buddy sidan */
-#buddybox{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+#buddybox {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 
-    background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.568);
 }
 
-#buddy{
-    width: 150px;
-    height: 150px;
+#buddy {
+  width: 150px;
+  height: 150px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.agents {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
