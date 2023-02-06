@@ -32,15 +32,18 @@ export function ValorantCompetitive_Tiers() {
     useState<ICompetitive_Tiers>();
 
   useEffect(() => {
-    axios
-      .get('https://valorant-api.com/v1/competitivetiers')
-      .then((res) => {
-        setAPICompetitive_Tiers(res.data);
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (APICompetitive_Tiers) {
+      if (APICompetitive_Tiers.data.length > 0) return;
+    } else
+      axios
+        .get('https://valorant-api.com/v1/competitivetiers')
+        .then((res) => {
+          setAPICompetitive_Tiers(res.data);
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   }, []);
 
   return (
@@ -53,7 +56,11 @@ export function ValorantCompetitive_Tiers() {
                 return (
                   <>
                     <p>{tier.tierName}</p>
-                    <img className="tier" src={tier.smallIcon} alt="" />
+                    <img
+                      className="tier"
+                      src={tier.smallIcon}
+                      alt={tier.tierName}
+                    />
                   </>
                 );
               })}
