@@ -1,3 +1,5 @@
-export function ValorantWeapons(){
-    return<></>
+import './ValorantWeapons.css';
+
+export function ValorantWeapons() {
+  return <></>;
 }

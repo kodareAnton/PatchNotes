@@ -4,6 +4,7 @@ import './ValorantPlayers_Titles.css';
 
 export function ValorantPlayers_Titles() {
   interface ITitles {
+    status: string;
     data: [
       {
         assetPath: string;
@@ -13,10 +14,9 @@ export function ValorantPlayers_Titles() {
         uuid: string;
       }
     ];
-    status: string;
   }
 
-  const [APIPlayers_Titles, setAPIPlayers_Titles] = useState<ITitles>();
+  const [APITitles, setAPIPlayers_Titles] = useState<ITitles>();
 
   useEffect(() => {
     axios
@@ -32,8 +32,12 @@ export function ValorantPlayers_Titles() {
 
   return (
     <>
-      {/* {APIPlayers_Titles.data.map((title) => {
-        return <div key={}></div>;
+      {/* {APITitles.data.map((title) => {
+        return (
+          <div className="text" key={title.displayName}>
+            <p>{title.titleText}</p>
+          </div>
+        );
       })} */}
     </>
   );

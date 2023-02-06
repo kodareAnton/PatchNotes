@@ -43,9 +43,9 @@ export function ValorantEvents() {
         return (
           <div className="event" key={event.displayName}>
             <h2>{event.displayName}</h2>
-            <p>Event name: {event.shortDisplayName}</p>
-            <p>Start Datum: {start}</p>
-            <p>Slut Datum: {end}</p>
+            <p>{event.shortDisplayName}</p>
+            <p>Start: {start}</p>
+            <p>End: {end}</p>
           </div>
         );
       })}
