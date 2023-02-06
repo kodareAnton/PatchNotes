@@ -1,0 +1,11 @@
+.tiers {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.473);
+}
+
+.tier {
+  width: 100px;
+  height: 100px;
+}
