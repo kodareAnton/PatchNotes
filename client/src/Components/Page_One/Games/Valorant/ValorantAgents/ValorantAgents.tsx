@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './ValorantAgents.css';
 
 export function ValorantAgents() {
   interface IAgents {
@@ -83,7 +84,7 @@ export function ValorantAgents() {
               }}
             >
               <p>{agent.displayName}</p>
-              <img src={agent.displayIcon} alt={agent.displayName} />
+              <img className='Agents' src={agent.displayIcon} alt={agent.displayName} />
             </div>
           );
         })}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './ValorantMaps.css';
 
 export function ValorantMaps() {
 
@@ -54,7 +55,7 @@ export function ValorantMaps() {
       {APIMap?.data.map((item) =>{
         return<>
         <h1>{item.displayName}</h1>
-        <img src={item.splash} alt={item.displayName} />
+        <img className="map" src={item.splash} alt={item.displayName} />
         
         </>
       })}

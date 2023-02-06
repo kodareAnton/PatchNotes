@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './ValorantBundles.css';
 
 export function ValorantBundles() {
   interface IBundles {
@@ -37,15 +38,12 @@ export function ValorantBundles() {
   return (
     <>
       <div
-        className="agents"
-        style={{
-          background: `black`,
-        }}
+        className="bundles_box"
       >
         {APIBundles?.data.map((bundle) => {
           return (
-            <div key={bundle.displayName}>
-              <p>{bundle.displayName}</p>´
+            <div className='bundles' key={bundle.displayName}>
+              <p>{bundle.displayName}</p>
               <img src={bundle.displayIcon} alt={bundle.displayName} />
             </div>
           );

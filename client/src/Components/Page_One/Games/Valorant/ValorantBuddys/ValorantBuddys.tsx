@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './ValorantBuddys.css';
 
 export function ValorantBuddys() {
   interface Ibuddy {
@@ -44,9 +45,9 @@ export function ValorantBuddys() {
       <h1>Buddys</h1>
       <div id="buddybox">
       {APIMap?.data.map((item) =>{
-        return<div id="buddy" key={item.displayName}>
+        return<div className="buddy" key={item.displayName}>
             <p>{item.displayName}</p>
-        <img src={item.displayIcon} alt={item.displayName} />
+        <img className="buddys" src={item.displayIcon} alt={item.displayName} />
         </div>
       })}
       </div>

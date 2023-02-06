@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ValorantMaps } from './ValorantMaps';
+import { ValorantMaps } from './ValorantMaps/ValorantMaps';
 import './Valorant.css';
 import { CheckComponent } from './CheckComponent';
 
