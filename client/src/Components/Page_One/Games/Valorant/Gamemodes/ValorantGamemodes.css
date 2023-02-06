@@ -1,0 +1,9 @@
+.gamemode_icon {
+  width: 100px;
+  height: 100px;
+}
+
+.Gamemodes {
+  display: flex;
+  justify-content: center;
+}

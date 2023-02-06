@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './ValorantGamemodes.css';
 
 export function ValorantGamemodes() {
   interface IGamemodes {
@@ -49,13 +50,17 @@ export function ValorantGamemodes() {
   return (
     <>
       <h1>Gamemodes</h1>
-      <div className="agents">
+      <div className="Gamemodes">
         {APIGamemode?.data.map((gamemode) => {
           return (
             <>
               <div>
                 <p>{gamemode.displayName}</p>
-                <img src={gamemode.displayIcon} alt={gamemode.displayName} />
+                <img
+                  className="gamemode_icon"
+                  src={gamemode.displayIcon}
+                  alt={gamemode.displayName}
+                />
               </div>
             </>
           );

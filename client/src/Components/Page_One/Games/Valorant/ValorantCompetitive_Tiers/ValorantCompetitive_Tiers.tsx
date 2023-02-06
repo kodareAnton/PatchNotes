@@ -51,7 +51,7 @@ export function ValorantCompetitive_Tiers() {
       {APICompetitive_Tiers?.data.map((tiers) => {
         return (
           <>
-            <div>
+            <div key={tiers.assetObjectName}>
               {tiers.tiers.map((tier) => {
                 return (
                   <>

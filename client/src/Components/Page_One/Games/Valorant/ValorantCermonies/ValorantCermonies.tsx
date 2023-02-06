@@ -16,15 +16,19 @@ export function ValorantCermonies() {
   const [APICermonies, setAPICermonies] = useState<ICermonies>();
 
   useEffect(() => {
-    axios
-      .get('https://valorant-api.com/v1/ceremonies')
-      .then((res) => {
-        setAPICermonies(res.data);
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // så att sidan inte laddas om varända gång användare gör något
+    if (APICermonies) {
+      if (APICermonies.data.length > 0) return;
+    } else
+      axios
+        .get('https://valorant-api.com/v1/ceremonies')
+        .then((res) => {
+          setAPICermonies(res.data);
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   }, []);
 
   return (
@@ -34,7 +38,7 @@ export function ValorantCermonies() {
       {APICermonies?.data.map((cermonie) => {
         return (
           <>
-            <h2>{cermonie.displayName}</h2>
+            <h2 className="text">{cermonie.displayName}</h2>
           </>
         );
       })}
