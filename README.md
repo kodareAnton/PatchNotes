@@ -13,3 +13,15 @@ https://fortnite-api.com/
 
 fixa useEffekt length
 tester med användare
+
+Summering av projekt
+application flow
+purpose
+Target audience
+Goal
+activity & timeplan
+site map
+database structure
+user stories
+test plan
+tech stack
