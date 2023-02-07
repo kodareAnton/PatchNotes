@@ -40,12 +40,15 @@ export function ValorantEvents() {
         const start = event.startTime;
         const end = event.endTime;
 
+        const starttime = start.slice(0,10)
+        const endTime = end.slice(0,10)
+
         return (
           <div className="event" key={event.displayName}>
             <h2>{event.displayName}</h2>
             <p>{event.shortDisplayName}</p>
-            <p>Start: {start}</p>
-            <p>End: {end}</p>
+            <p>Start: {starttime}</p>
+            <p>End: {endTime}</p>
           </div>
         );
       })}

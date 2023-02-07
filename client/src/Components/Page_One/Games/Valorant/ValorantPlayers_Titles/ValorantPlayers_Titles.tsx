@@ -32,13 +32,13 @@ export function ValorantPlayers_Titles() {
 
   return (
     <>
-      {/* {APITitles.data.map((title) => {
+      {APITitles?.data.map((title) => {
         return (
           <div className="text" key={title.displayName}>
             <p>{title.titleText}</p>
           </div>
         );
-      })} */}
+      })}
     </>
   );
 }

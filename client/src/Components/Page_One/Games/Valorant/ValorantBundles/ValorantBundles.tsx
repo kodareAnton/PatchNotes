@@ -44,7 +44,7 @@ export function ValorantBundles() {
           return (
             <div className='bundles' key={bundle.displayName}>
               <p>{bundle.displayName}</p>
-              <img src={bundle.displayIcon} alt={bundle.displayName} />
+              <img id='bundleImg' src={bundle.displayIcon} alt={bundle.displayName} />
             </div>
           );
         })}
