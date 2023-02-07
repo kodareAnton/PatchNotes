@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './ValorantCuntent_Tiers.css'
 
 export function ValorantCuntent_Tiers() {
   interface ITiers {
@@ -35,5 +36,15 @@ export function ValorantCuntent_Tiers() {
         console.log(error);
       });
   }, []);
-  return <></>;
+  return <div className="tiers">
+    {APITiers?.data.map((tiers) =>{
+      return<div key={tiers.displayName}>
+        <h2>{tiers.displayName}</h2>
+        <img src={tiers.displayIcon} alt={tiers.rank} />
+      
+        <p>Cost: {tiers.juiceCost}€</p>
+        
+      </div>
+    })}
+  </div>;
 }
