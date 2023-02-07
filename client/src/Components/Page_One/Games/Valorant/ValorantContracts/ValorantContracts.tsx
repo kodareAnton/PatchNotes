@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './ValorantContracts.css';
 
 export function ValorantContracts() {
   interface IContracts {
@@ -64,5 +65,24 @@ export function ValorantContracts() {
           console.log(error);
         });
   }, []);
-  return <></>;
+  return (
+    <div className="contracts">
+      {APIContracts?.data.map((contract) => {
+        if (contract.displayIcon === null) {
+          return;
+        } else
+          return (
+            <div key={contract.displayName} className="contract">
+              <p>{contract.displayName}</p>
+              <img
+                className="contractImg"
+                src={contract.displayIcon}
+                alt={contract.displayName}
+              />
+              <p>Cost: {contract.content.premiumVPCost}</p>
+            </div>
+          );
+      })}
+    </div>
+  );
 }
