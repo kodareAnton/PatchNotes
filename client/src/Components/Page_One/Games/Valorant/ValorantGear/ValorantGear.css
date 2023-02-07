@@ -1,0 +1,17 @@
+.gearBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.gear {
+  background-color: rgba(0, 0, 0, 0.651);
+  margin: 2%;
+  width: 500px;
+  height: 500px;
+}
+
+#gearIcon {
+  height: 200px;
+  width: 200px;
+}

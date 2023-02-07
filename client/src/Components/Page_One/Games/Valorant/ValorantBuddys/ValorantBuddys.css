@@ -1,0 +1,28 @@
+.buddy{
+    padding: 10px;
+}
+
+.buddy:hover{
+    border :1px solid rgb(23, 143, 39)
+}
+
+.buddys{
+    
+    margin: 1px;
+    width: 100px;
+    height: 100px;
+}
+
+/* styling för css buddy sidan */
+#buddybox {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.568);
+  }
+  
+  #buddy {
+    width: 150px;
+    height: 150px;
+  }

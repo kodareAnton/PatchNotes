@@ -1,0 +1,22 @@
+.sprayImg {
+  height: 100px;
+  width: 100px;
+}
+
+.sprayIcon {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+.sprayIcon:hover {
+  border: 1px solid rgba(7, 255, 7, 0.548);
+  background-color: rgba(15, 231, 15, 0.311);
+}
+
+#sprayBox {
+  background-color: rgba(0, 0, 0, 0.685);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
