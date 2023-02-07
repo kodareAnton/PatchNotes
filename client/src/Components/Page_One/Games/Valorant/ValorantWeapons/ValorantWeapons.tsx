@@ -118,5 +118,20 @@ export function ValorantWeapons() {
           console.log(error);
         });
   }, []);
-  return <></>;
+  return (
+    <div className="weapons">
+      {APIWeapons?.data.map((weapons) => {
+        return (
+          <div className="weapon" key={weapons.displayName}>
+            <p>{weapons.displayName}</p>
+            <img
+              className="weaponImg"
+              src={weapons.displayIcon}
+              alt={weapons.displayName}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
 }
