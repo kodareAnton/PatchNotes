@@ -31,7 +31,7 @@ export function Home() {
               keep track on what new patchnotes and events thats coming up.{' '}
             </p>
             <button onClick={navigateToLogin}>Login</button>
-            <button onClick={navigateToGames}>Updates</button>
+            <button onClick={navigateToGames}>Games</button>
           </div>
         </div>
       </>

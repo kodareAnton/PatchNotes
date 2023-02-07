@@ -1,4 +1,8 @@
-
+.valoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .agents {
   display: flex;

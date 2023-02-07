@@ -40,10 +40,10 @@ export function ValorantVersion() {
 
   return (
     <div id="version" key={APIVersion?.data.manifestId}>
-      <h2>Verson: {APIVersion?.data.version}</h2>
+      <h2>Version: {APIVersion?.data.version}</h2>
       <p>Buildversion: {APIVersion?.data.buildVersion}</p>
       <p>Date: {date}</p>
-      <p>Engine Verson: {APIVersion?.data.engineVersion}</p>
+      <p>Engine Version: {APIVersion?.data.engineVersion}</p>
     </div>
   );
 }

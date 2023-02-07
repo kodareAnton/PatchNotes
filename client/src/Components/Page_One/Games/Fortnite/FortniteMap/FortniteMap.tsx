@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './Fortnite.css';
+// import './Fortnite.css';
 
 export function FortniteMap() {
   const [Map, setMap] = useState<Map>();

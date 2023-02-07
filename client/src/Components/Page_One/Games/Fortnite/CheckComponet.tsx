@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { FortniteBanners } from './FortniteBanners';
-import { FortniteCosmetics } from './FortniteCosmetics';
-import { FortniteMap } from './FortniteMap';
-import { FortniteShop } from './FortntiteShop';
-import { FortniteNews } from './FotniteNews';
+import { FortniteBanners } from './FortniteBanners/FortniteBanners';
+import { FortniteCosmetics } from './FortniteCosmetics/FortniteCosmetics';
+import { FortniteMap } from './FortniteMap/FortniteMap';
+import { FortniteShop } from './FortntiteShop/FortntiteShop';
+import { FortniteNews } from './FotniteNews/FotniteNews';
 
 export function CheckComponent() {
   const API = [

@@ -1,16 +1,17 @@
-#cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.584);
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.584);
 }
 
-#card:hover{
-    border: 1px solid rgba(7, 169, 7, 0.578);
-    background-color: rgba(10, 123, 10, 0.495);
+#card:hover {
+  border: 1px solid rgba(7, 169, 7, 0.578);
+  background-color: rgba(10, 123, 10, 0.495);
 }
 
-#card{
-   text-align: center;
-    margin: 1%;
+#card {
+  padding: 1%;
+  text-align: center;
+  margin: 1%;
 }

@@ -10,3 +10,10 @@
   width: auto;
   height: auto;
 }
+
+.weaponImg:hover {
+  width: auto;
+  height: auto;
+  border: 1px solid rgba(7, 255, 7, 0.548);
+  background-color: rgba(15, 231, 15, 0.311);
+}
