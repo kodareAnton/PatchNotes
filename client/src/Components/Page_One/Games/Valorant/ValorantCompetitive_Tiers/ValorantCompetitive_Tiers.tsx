@@ -47,21 +47,30 @@ export function ValorantCompetitive_Tiers() {
   }, []);
 
   return (
-    <div className="tiers">
+    <div className="tiersBox">
       {APICompetitive_Tiers?.data.map((tiers) => {
+
+        const season = tiers.assetObjectName
+        const seasons = season.slice(0, 8)
+
         return (
           <>
-            <div key={tiers.assetObjectName}>
+          <h2 className='seasons'>{seasons}</h2>
+            <div className='tiers' key={tiers.assetObjectName}>
               {tiers.tiers.map((tier) => {
+
+
+                if(tier.smallIcon === null){return
+                }else
                 return (
-                  <>
+                  <div className='tier'>
                     <p>{tier.tierName}</p>
                     <img
-                      className="tier"
+                      className="tierImg"
                       src={tier.smallIcon}
                       alt={tier.tierName}
                     />
-                  </>
+                  </div>
                 );
               })}
             </div>

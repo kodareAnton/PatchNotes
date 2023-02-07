@@ -6,4 +6,10 @@
 .Gamemodes {
   display: flex;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.603)
+}
+
+#gamemode{
+  margin: 10px;
+  text-align: center;
 }
