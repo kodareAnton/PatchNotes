@@ -35,12 +35,15 @@ export function ValorantVersion() {
         });
   }, []);
 
+  const data = APIVersion?.data.buildDate;
+  const date = data?.slice(0, 10);
+
   return (
     <div id="version" key={APIVersion?.data.manifestId}>
       <h2>Verson: {APIVersion?.data.version}</h2>
       <p>Buildversion: {APIVersion?.data.buildVersion}</p>
-      <p>Date: {APIVersion?.data.buildDate}</p>
-      <p>Engin Verson: {APIVersion?.data.engineVersion}</p>
+      <p>Date: {date}</p>
+      <p>Engine Verson: {APIVersion?.data.engineVersion}</p>
     </div>
   );
 }
