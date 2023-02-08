@@ -1,6 +1,6 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import './ValorantPlayer_Cards.css'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import './ValorantPlayer_Cards.css';
 
 export function ValorantPlayer_Cards() {
   interface ICards {
@@ -22,9 +22,10 @@ export function ValorantPlayer_Cards() {
 
   const [APICards, setAPICards] = useState<ICards>();
 
+  // hämtar hem från API
   useEffect(() => {
     axios
-      .get("https://valorant-api.com/v1/playercards")
+      .get('https://valorant-api.com/v1/playercards')
       .then((res) => {
         setAPICards(res.data);
         console.log(res.data);

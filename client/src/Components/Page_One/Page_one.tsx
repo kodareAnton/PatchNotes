@@ -19,30 +19,10 @@ export function Page_One() {
       <div id="container_games">
         <div className="game" onClick={redirect}>
           <img className="gameImg" src="img/Fortnite.jpg"></img>
-          <button>Add To Favorite</button>
         </div>
         <div className="game" onClick={redirectValorant}>
           <img className="gameImg" src="img/Valorant.png"></img>
-          <button>Add To Favorite</button>
         </div>
-        {/* <div className="game">
-          <img src="img/Apex.jpg"></img>
-        </div>
-        <div className="game">
-          <img src="img/Overwatch_2.jpg"></img>
-        </div>
-        <div className="game">
-          <img src="img/CsGo.jpg"></img>
-        </div>
-        <div className="game">
-          <img src="img/LostArk.jpg"></img>
-        </div>
-        <div className="game">
-          <img src="img/Borderlands3.jpg"></img>
-        </div>
-        <div className="game">
-          <img src="img/VampireBloodhunt.jpg"></img>
-        </div> */}
       </div>
     </>
   );

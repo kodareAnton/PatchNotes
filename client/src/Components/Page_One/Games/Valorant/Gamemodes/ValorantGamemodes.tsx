@@ -52,15 +52,20 @@ export function ValorantGamemodes() {
       <h1>Gamemodes</h1>
       <div className="Gamemodes">
         {APIGamemode?.data.map((gamemode) => {
+
+          if(gamemode.duration === null){
+            return;
+          }else
           return (
             <>
-              <div>
-                <p>{gamemode.displayName}</p>
+              <div id='gamemode' key={gamemode.displayName}>
+                <h2>{gamemode.displayName}</h2>
                 <img
                   className="gamemode_icon"
                   src={gamemode.displayIcon}
                   alt={gamemode.displayName}
                 />
+                <p>Time: {gamemode.duration}</p>
               </div>
             </>
           );

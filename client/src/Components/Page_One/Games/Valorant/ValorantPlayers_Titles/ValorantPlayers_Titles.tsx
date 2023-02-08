@@ -31,7 +31,7 @@ export function ValorantPlayers_Titles() {
   }, []);
 
   return (
-    <>
+    <div className="textBox">
       {APITitles?.data.map((title) => {
         return (
           <div className="text" key={title.displayName}>
@@ -39,6 +39,6 @@ export function ValorantPlayers_Titles() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

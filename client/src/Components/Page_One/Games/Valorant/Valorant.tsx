@@ -61,7 +61,7 @@ export function Valorant() {
   return (
     <>
       <h1>Valorant</h1>
-      <ul>{APIList}</ul>
+      <ul className="valoList">{APIList}</ul>
 
       <CheckComponent />
     </>

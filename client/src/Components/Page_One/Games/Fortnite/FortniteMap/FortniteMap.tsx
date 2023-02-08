@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './Fortnite.css';
+// import './Fortnite.css';
 
 export function FortniteMap() {
   const [Map, setMap] = useState<Map>();
@@ -40,7 +40,7 @@ export function FortniteMap() {
     <div id="FotniteMap">
       <img
         className="map"
-        src={Map?.data.images.blank}
+        src={Map?.data.images.pois}
         alt={Map?.data.images.blank}
       />
     </div>

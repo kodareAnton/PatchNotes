@@ -37,14 +37,16 @@ export function ValorantBundles() {
   }, []);
   return (
     <>
-      <div
-        className="bundles_box"
-      >
+      <div className="bundles_box">
         {APIBundles?.data.map((bundle) => {
           return (
-            <div className='bundles' key={bundle.displayName}>
+            <div className="bundles" key={bundle.displayName}>
               <p>{bundle.displayName}</p>
-              <img id='bundleImg' src={bundle.displayIcon} alt={bundle.displayName} />
+              <img
+                className="bundleImg"
+                src={bundle.displayIcon}
+                alt={bundle.displayName}
+              />
             </div>
           );
         })}

@@ -76,15 +76,6 @@ a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-/* #HomeDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  width: 250px;
-  background-color: rgba(0, 0, 0, 0.753);
-} */
-
 #loginBtn {
   border: none;
   border-radius: 50px;

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './FortniteNews.css';
 
 export function FortniteNews() {
   interface News {
@@ -56,6 +57,14 @@ export function FortniteNews() {
       <div className="contentInNews">
         <h1>{News?.data.br.date.slice(0, -10)}</h1>
         <img src={News?.data.br.image} alt={News?.data.br.image} />
+        {News?.data.br.motds.map((text) => {
+          return (
+            <>
+              <h2>{text.title}</h2>
+              <p>{text.body}</p>
+            </>
+          );
+        })}
       </div>
     </div>
   );

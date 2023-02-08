@@ -1,0 +1,16 @@
+.contracts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.contract {
+  margin: 10px;
+}
+
+.contractImg {
+  height: 200px;
+  width: 200px;
+}

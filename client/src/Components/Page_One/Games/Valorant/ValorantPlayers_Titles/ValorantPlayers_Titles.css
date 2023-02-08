@@ -1,4 +1,7 @@
 .text {
   text-align: center;
-  background-color: black;
+}
+
+.textBox {
+  background-color: rgba(0, 0, 0, 0.616);
 }

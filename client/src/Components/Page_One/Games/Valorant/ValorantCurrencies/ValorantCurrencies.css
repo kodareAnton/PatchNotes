@@ -1,0 +1,7 @@
+.currenciesBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.61);
+}

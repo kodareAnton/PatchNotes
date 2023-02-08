@@ -1,11 +1,32 @@
+.seasons {
+  margin: 0;
+  margin-top: 1%;
+  font-size: 2rem;
+  text-align: center;
+  background-color: black;
+}
 .tiers {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+
   background-color: rgba(0, 0, 0, 0.473);
 }
 
 .tier {
-  width: 50px;
-  height: 50px;
+  margin: 10px;
+}
+
+.tierImg {
+  width: 75px;
+  height: 75px;
+}
+
+@media screen and (max-width: 500px) {
+  .seasons {
+    margin: 0;
+    margin-top: 10%;
+    font-size: 2rem;
+  }
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './ValorantThemes.css'
 
 export function ValorantThemes() {
   interface ITheme {
@@ -28,10 +29,16 @@ export function ValorantThemes() {
         console.log(error);
       });
   }, []);
-  return <div>
+
+  
+  return <div className="themes">
     {APIThemes?.data.map((theme) =>{
-        return<div key={theme.displayName}><p>{theme.displayName}</p>
-        <img src={theme.displayIcon} alt={theme.displayName} /></div>
+
+if(theme.displayIcon === null){
+  return;
+}else
+        return<div className="theme" key={theme.displayName}><p>{theme.displayName}</p>
+        <img className="themeImg" src={theme.displayIcon} alt={theme.displayName} /></div>
     })}
   </div>;
 }

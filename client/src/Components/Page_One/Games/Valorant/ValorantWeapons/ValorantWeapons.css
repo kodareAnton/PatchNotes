@@ -1,0 +1,18 @@
+.weapons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.596);
+  text-align: center;
+}
+
+.weaponImg {
+  width: auto;
+  height: auto;
+}
+
+.weaponImg:hover {
+  width: auto;
+  height: auto;
+  background-color: rgba(15, 231, 15, 0.311);
+}
