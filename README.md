@@ -4,6 +4,13 @@
 
 MingJunior's server is a a website where you can check
 
+# Npm Packages
+
+- feather-icons
+- react-router-dom
+- router
+- axios
+
 # Starta projegetet
 
 npm run dev
