@@ -43,7 +43,8 @@ export function Home() {
       <>
         <div className="placementDiv">
           <div id="HomeDiv">
-            <h2>Welcome back {userId}</h2>
+            <div id='userbox'> <img id='userImg' src="/img/user.jpg" alt="user" /><p>{userId}</p></div>
+            <h2>Welcome back!</h2>
             <p>
               {' '}
               Weclome to your site! follow your favoirit games and see whats
@@ -54,7 +55,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="HomeCards">
+        {/* <div className="HomeCards">
           <div className="HomeCard">
             <h2>News1</h2>
             <p>babababa vbababa ba bababab aaba babab abab abab </p>
@@ -67,7 +68,7 @@ export function Home() {
             <h2>News3</h2>
             <p>bababababab vbababa ba bababab aaba babab abab abab </p>
           </div>
-        </div>
+        </div> */}
       </>
     );
   }

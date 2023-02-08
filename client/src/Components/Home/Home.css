@@ -42,3 +42,15 @@
 .HomeCard:hover {
   filter: drop-shadow(10px 10px 4px #2bff0033);
 }
+
+#userbox{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#userImg{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}

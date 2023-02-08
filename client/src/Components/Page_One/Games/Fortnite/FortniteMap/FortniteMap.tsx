@@ -40,7 +40,7 @@ export function FortniteMap() {
     <div id="FotniteMap">
       <img
         className="map"
-        src={Map?.data.images.blank}
+        src={Map?.data.images.pois}
         alt={Map?.data.images.blank}
       />
     </div>

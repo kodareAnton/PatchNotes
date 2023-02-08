@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Home } from 'react-feather';
+// import { Home } from 'react-feather';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import { Footer } from './Components/Footer/Footer';
+import { Home } from './Components/Home/Home';
 import { Login } from './Components/Login/Login';
 import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
 import { Valorant } from './Components/Page_One/Games/Valorant/Valorant';

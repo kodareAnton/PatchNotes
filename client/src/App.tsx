@@ -33,10 +33,6 @@ function App() {
           <X id="X" onClick={closeMenu} />
         </ul>
       </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
     </>
   );
 }

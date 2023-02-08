@@ -1,7 +1,5 @@
-import { redirect, stripBasename } from '@remix-run/router';
+
 import { useState } from 'react';
-import { User } from 'react-feather';
-import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 export function Login() {
@@ -52,20 +50,20 @@ export function Login() {
   return (
     <div id="Login">
       <form onSubmit={LoggaIn}>
-        <label>Namn:</label>
+        <label>Name:</label>
         <input
           type="text"
           value={Name}
           onChange={(e) => setName(e.target.value)}
         />
 
-        <label>Lössenord:</label>
+        <label>Password:</label>
         <input
           type="password"
           value={Password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <input className="btn" type="submit" />
+        <input value={'Login'} className="btn" type="submit" />
       </form>
     </div>
   );
