@@ -15,12 +15,11 @@ MingJunior's server is a a website where you can check
 
 npm run dev
 
-## API's:
+## API's
 
 https://dash.valorant-api.com/
 https://fortnite-api.com/
 
-fixa useEffekt length
 tester med användare
 
 Summering av projekt
