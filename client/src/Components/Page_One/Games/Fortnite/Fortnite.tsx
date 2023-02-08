@@ -18,7 +18,8 @@ export function Fortnite() {
     },
     {
       id: 2,
-      name: 'FortniteCosmetics',
+      name: 'Cosmetics',
+      link: 'FortniteCosmetics',
       content: <FortniteCosmetics />,
     },
     // { id: 3, name: 'CreatorCode', link: 'CreatorCode' },
