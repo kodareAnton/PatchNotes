@@ -1,7 +1,7 @@
 #container_games {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  height: 100vh;
 }
 
 #choose_game {
