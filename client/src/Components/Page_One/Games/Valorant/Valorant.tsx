@@ -7,11 +7,7 @@ export function Valorant() {
   const API = [
     { id: 0, name: 'Agents', link: 'ValorantAgents' },
     { id: 1, name: 'Bubbys', link: 'ValorantBuddys' },
-    {
-      id: 2,
-      name: 'Bundles',
-      link: 'ValorantBundles',
-    },
+    { id: 2, name: 'Bundles', link: 'ValorantBundles' },
     { id: 3, name: 'Cermonies', link: 'ValorantCermonies' },
     { id: 4, name: 'Competitive Tiers', link: 'ValorantCompetitive_Tiers' },
     { id: 5, name: 'Content Tiers', link: 'ValorantCuntent_Tiers' },
