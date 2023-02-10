@@ -78,6 +78,6 @@ API's
 Fortnite: https://fortnite-api.com/
 Valorant: https://valorant-api.com/
 
-# Starta projegetet
+# Start project
 
 npm run dev
