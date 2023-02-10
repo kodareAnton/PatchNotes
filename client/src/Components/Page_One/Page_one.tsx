@@ -15,12 +15,14 @@ export function Page_One() {
 
   return (
     <>
-      <h1 id="choose_game">Välj ett spel!</h1>
+      {/* <h1 id="choose_game">Välj ett spel!</h1> */}
       <div id="container_games">
         <div className="game" onClick={redirect}>
+          <h2>Fortnite</h2>
           <img className="gameImg" src="img/Fortnite.jpg"></img>
         </div>
         <div className="game" onClick={redirectValorant}>
+          <h2>Valorant</h2>
           <img className="gameImg" src="img/Valorant.png"></img>
         </div>
       </div>

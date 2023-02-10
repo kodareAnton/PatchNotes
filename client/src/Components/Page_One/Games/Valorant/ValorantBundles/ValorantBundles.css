@@ -1,5 +1,5 @@
 .bundles_box {
-  background-color: rgba(0, 0, 0, 0.33);
+  background-color: rgba(0, 0, 0, 0.575);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -7,14 +7,14 @@
 
 .bundles {
   margin: 2%;
-  background-color: rgba(0, 0, 0, 0.385);
+  background-color: rgba(0, 0, 0, 0.795);
   text-align: center;
   width: 400px;
   height: 400px;
 }
 
 .bundles:hover {
-  background-color: rgba(0, 214, 0, 0.377);
+  background-color: rgba(6, 112, 6, 0.795);
 }
 
 .bundleImg {

@@ -25,7 +25,7 @@ export function Fortnite() {
     // { id: 3, name: 'CreatorCode', link: 'CreatorCode' },
     { id: 4, name: 'Map', link: 'FortniteMap', content: <FortniteMap /> },
     { id: 5, name: 'News', link: 'FortniteNews', content: <FortniteNews /> },
-    { id: 6, name: 'Playlists', link: 'Playlists' },
+    // { id: 6, name: 'Playlists', link: 'Playlists' },
     { id: 7, name: 'Shop', link: 'FortniteShop', content: <FortniteShop /> },
     // { id: 8, name: 'Stats', link: 'Stats' },
   ];

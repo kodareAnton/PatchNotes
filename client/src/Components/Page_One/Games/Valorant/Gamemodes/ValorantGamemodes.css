@@ -6,10 +6,16 @@
 .Gamemodes {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.603)
+  background-color: rgba(0, 0, 0, 0.603);
 }
 
-#gamemode{
+#gamemode {
   margin: 10px;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .Gamemodes {
+    flex-wrap: wrap;
+  }
 }

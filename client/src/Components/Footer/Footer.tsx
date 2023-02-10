@@ -6,20 +6,16 @@ export function Footer() {
     <div id="Footer">
       <div className="FooterBottom">
         <p>kodare Anton</p>
-
-        <p>MingJunior's Server</p>
+        <GitHub />
       </div>
       <p className="line">|</p>
       <div className="FooterBottom">
-        <p>kodare Anton</p>
-
-        <p>MingJunior's Server</p>
+        <GitHub />
+        <Instagram />
       </div>
       <p className="line">|</p>
       <div>
         {' '}
-        <GitHub />
-        <Instagram />
         <Linkedin />
         <Mail />
       </div>

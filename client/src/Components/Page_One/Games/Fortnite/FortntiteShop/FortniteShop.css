@@ -1,0 +1,16 @@
+.shopbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.shopboxo {
+  background-color: rgba(0, 0, 0, 0.801);
+  text-align: center;
+}
+
+.itemImg {
+  width: 100px;
+  height: 100px;
+}

@@ -23,8 +23,14 @@
 .game {
   height: 12rem;
   margin: 1%;
-  border: 1px solid rgb(23, 143, 39);
   cursor: pointer;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 5%;
+}
+
+.game:hover {
+  background-color: rgba(10, 124, 6, 0.658);
 }
 
 .gameImg {
@@ -34,5 +40,11 @@
 @media screen and (min-width: 500px) {
   .gameImg {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game {
+    margin: 0%;
   }
 }

@@ -1,3 +1,7 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import './FortniteCosmetics.css';
+
 export function FortniteCosmetics() {
   interface ICosmetics {
     status: number;
@@ -65,9 +69,38 @@ export function FortniteCosmetics() {
       }
     ];
   }
+
+  const [APICosmetics, setAPICosmetics] = useState<ICosmetics>();
+
+  useEffect(() => {
+    if (APICosmetics) {
+      if (APICosmetics.data.length > 0) return;
+    } else
+      axios
+        .get('https://fortnite-api.com/v2/cosmetics/br')
+        .then((res) => {
+          setAPICosmetics(res.data);
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  }, []);
+
   return (
-    <>
-      <h1>Cosmetics</h1>
-    </>
+    <div className="cosmeticsBox">
+      {APICosmetics?.data.map((cosmetic) => {
+        return (
+          <div className="cosmetic" key={cosmetic.id}>
+            <p>{cosmetic.name}</p>
+            <img
+              className="cosmeticImg"
+              src={cosmetic.images.smallIcon}
+              alt={cosmetic.id}
+            />
+          </div>
+        );
+      })}
+    </div>
   );
 }
