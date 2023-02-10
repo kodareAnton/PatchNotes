@@ -79,7 +79,6 @@ export function ValorantContracts() {
                 src={contract.displayIcon}
                 alt={contract.displayName}
               />
-              <p>Cost: {contract.content.premiumVPCost}</p>
             </div>
           );
       })}

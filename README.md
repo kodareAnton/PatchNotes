@@ -81,3 +81,8 @@ Valorant: https://valorant-api.com/
 # Start project
 
 npm run dev
+
+# loggin
+
+name: Anton
+password: 123
