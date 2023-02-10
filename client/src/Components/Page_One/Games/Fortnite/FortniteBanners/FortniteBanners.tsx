@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './FortniteBanners.css';
 
 export function FortniteBanners() {
   interface IBanner {
@@ -46,11 +47,5 @@ export function FortniteBanners() {
     );
   });
 
-  return (
-    <>
-      <h1 id="Fortnite">Banners</h1>
-
-      {allBanners}
-    </>
-  );
+  return <div className="FBanner">{allBanners}</div>;
 }

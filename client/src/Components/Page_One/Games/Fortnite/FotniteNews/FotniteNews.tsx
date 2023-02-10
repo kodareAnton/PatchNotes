@@ -56,7 +56,11 @@ export function FortniteNews() {
     <div id="news">
       <div className="contentInNews">
         <h1>{News?.data.br.date.slice(0, -10)}</h1>
-        <img src={News?.data.br.image} alt={News?.data.br.image} />
+        <img
+          className="ContentImg"
+          src={News?.data.br.image}
+          alt={News?.data.br.image}
+        />
         {News?.data.br.motds.map((text) => {
           return (
             <>

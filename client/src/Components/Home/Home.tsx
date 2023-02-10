@@ -43,7 +43,11 @@ export function Home() {
       <>
         <div className="placementDiv">
           <div id="HomeDiv">
-            <div id='userbox'> <img id='userImg' src="/img/user.jpg" alt="user" /><p>{userId}</p></div>
+            <div id="userbox">
+              {' '}
+              <img id="userImg" src="/img/user.jpg" alt="user" />
+              <p>{userId}</p>
+            </div>
             <h2>Welcome back!</h2>
             <p>
               {' '}
@@ -52,6 +56,7 @@ export function Home() {
             </p>
 
             <button onClick={cleanLocalStorage}>Logout</button>
+            <button onClick={navigateToGames}>Games</button>
           </div>
         </div>
 

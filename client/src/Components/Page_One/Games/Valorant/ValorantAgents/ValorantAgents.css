@@ -1,4 +1,10 @@
-.Agents{
-    width: 200px;
-    height: 200px;
+.Agents {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 500px) {
+  .agents {
+    justify-content: center;
+  }
 }

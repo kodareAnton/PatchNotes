@@ -1,4 +1,8 @@
 #version {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.651);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.795);
+  padding: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
