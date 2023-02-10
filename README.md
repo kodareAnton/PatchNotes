@@ -24,7 +24,7 @@
 the ideé of the project is to bring gamers updates about there favorite games all in one website.
 The website is about to bring all relevant content about the game that a gamer that plays that game want to know. For examples events, shops, skins and so on. Why this is needed is becoues the people that are playing a game much might want to regulary check what event & cosmetics that are coming out on a dayly basis or weekly basis.
 
-Github: https://kodareanton.github.io/ExamensArbete/
+Länk till projectet: examens-arbete-tau.vercel.app
 
 ## Background
 
@@ -48,7 +48,7 @@ I had a few Hiccups thats included the amount of work that i had to do to get ou
 
 ### Technical evaluation
 
-Tech stack
+## Tech stack
 
 - react vite
 - typescript
