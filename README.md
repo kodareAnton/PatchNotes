@@ -13,7 +13,7 @@
 - personas and userstories
 - personas and stories
 - Results from user stories
--     Activity and time plan
+- Activity and time plan
 - Technical evaluation
 - Lessons Learned
 - Results
@@ -24,7 +24,7 @@
 the ideé of the project is to bring gamers updates about there favorite games all in one website.
 The website is about to bring all relevant content about the game that a gamer that plays that game want to know. For examples events, shops, skins and so on. Why this is needed is becoues the people that are playing a game much might want to regulary check what event & cosmetics that are coming out on a dayly basis or weekly basis.
 
-Länk till projectet: examens-arbete-tau.vercel.app
+Link: examens-arbete-tau.vercel.app
 
 ## Background
 
@@ -82,7 +82,7 @@ Valorant: https://valorant-api.com/
 
 npm run dev
 
-# loggin
+# login
 
 name: Anton
 password: 123
