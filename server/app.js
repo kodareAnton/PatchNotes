@@ -15,7 +15,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017',{
 })
 .then(client => {
     console.log('Du är uppkopplad till databasen');
-
     // kolla om users är något annat
     const db = client.db('mydbusers');
     app.locals.db = db;
@@ -28,6 +27,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/health', (req, res) => {
+    res.status(200).send('Ok');
+  });
+
+// app.listen(port, () => {
+//     console.log('Node server up and running: http://localhost:${port}')
+//   })
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

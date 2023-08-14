@@ -29,6 +29,12 @@ router.get("/", function (req, res, next) {
 
 // Hittar en och skriver ut det
 
+router.get('/postit', function (req, res, next){
+  let ppl = ['anton', 'nils']
+
+  res.status(200).json(ppl)
+})
+
 router.post("/user", function (req, res, next) {
   req.app.locals.db
     .collection("GameNames")
