@@ -20,16 +20,19 @@ function App() {
       <nav>
         <Menu id="Menu" onClick={OpenMenu} />
         <img src="img/logoPokemon.png" alt="ChrismasLogo" id="logo"></img>
+        <h1>
+          <Link to="/">Patch Notes!</Link>
+        </h1>
         <ul id="navText">
-          <li>
+          {/* <li>
             <Link to="/">Home</Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/Page_One"> Games</Link>
+            <Link to="/"> Games</Link>
           </li>
-          <li id="loginBtn">
+          {/* <li id="loginBtn">
             <Link to="/Login">Login</Link>
-          </li>
+          </li> */}
           <X id="X" onClick={closeMenu} />
         </ul>
       </nav>

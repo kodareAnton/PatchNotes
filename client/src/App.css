@@ -14,7 +14,7 @@ body {
   padding: 0;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(#0f1f30, #051301);
+  background: linear-gradient(#202020, #000000);
 }
 
 button {
@@ -23,7 +23,7 @@ button {
   border: none;
   margin: 1%;
   border-radius: 2px;
-  background: linear-gradient(rgb(19, 131, 9), rgb(17, 18, 56));
+  background: linear-gradient(rgb(19, 131, 9), rgb(23, 27, 156));
 }
 
 button:hover {
@@ -33,7 +33,7 @@ button:hover {
 }
 
 #root {
-  background-image: url('/public/img/Genji_mobil.jpg');
+  /* background-image: url('/public/img/Genji_mobil.jpg'); */
   background-size: cover;
   object-fit: fill;
   height: 100vh;
@@ -48,9 +48,11 @@ button:hover {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 3%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 ul {
@@ -86,7 +88,7 @@ a:hover {
 /* iconer som inte ska synas */
 @media screen and (min-width: 500px) {
   #root {
-    background: url('/img/Genji_walpaper.jpg');
+    /* background: url('/img/Genji_walpaper.jpg'); */
     background-position: center;
     background-size: cover;
     object-fit: fill;
@@ -103,7 +105,7 @@ a:hover {
 /* mobil Läge */
 @media screen and (max-width: 500px) {
   #root {
-    background-image: url('/img/Genji_mobil.jpg');
+    /* background-image: url('/img/Genji_mobil.jpg'); */
     background-position: center;
     background-size: cover;
     object-fit: fill;

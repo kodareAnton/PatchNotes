@@ -17,9 +17,16 @@ export function Page_One() {
     navigate('/Page_one/D4');
   }
 
+  function redirectCs() {
+    navigate('/Page_one/Cs');
+  }
+
+  function redirectOverwatch() {
+    navigate('/Page_one/Overwatch');
+  }
+
   return (
     <>
-      {/* <h1 id="choose_game">Välj ett spel!</h1> */}
       <div id="container_games">
         <div className="game" onClick={redirectFortnite}>
           <h2>Fortnite</h2>
@@ -32,6 +39,14 @@ export function Page_One() {
         <div className="game" onClick={redirectD4}>
           <h2>Diablo 4</h2>
           <img className="gameImg" src="img/Diablo-4-Patch.jpg"></img>
+        </div>
+        <div className="game" onClick={redirectCs}>
+          <h2>Cs</h2>
+          <img className="gameImg" src="img/CsGo.jpg"></img>
+        </div>
+        <div className="game" onClick={redirectOverwatch}>
+          <h2>Overwatch 2</h2>
+          <img className="gameImg" src="img/Overwatch_2.jpg"></img>
         </div>
       </div>
     </>

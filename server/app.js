@@ -6,6 +6,7 @@ var cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var gamesRouter = require('./routes/games');
 
 var app = express();
 
@@ -32,11 +33,9 @@ app.get('/health', (req, res) => {
     res.status(200).send('Ok');
   });
 
-// app.listen(port, () => {
-//     console.log('Node server up and running: http://localhost:${port}')
-//   })
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/games', gamesRouter);
 
 module.exports = app;

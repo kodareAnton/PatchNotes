@@ -24,7 +24,7 @@ p {
 
 @media screen and (min-width: 500px) {
   #Footer {
-    background-color: rgba(0, 0, 0, 0.242);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 9rem;
     color: white;
     display: flex;

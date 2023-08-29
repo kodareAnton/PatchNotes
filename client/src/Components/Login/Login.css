@@ -8,11 +8,10 @@
 
 form {
   padding: 2%;
- 
+
   border-radius: 20px;
   width: 450px;
   background-color: rgba(0, 0, 0, 0.63);
- 
 
   display: flex;
   justify-content: center;
@@ -20,7 +19,7 @@ form {
   align-items: center;
 
   height: 50vh;
-  
+
   border-radius: 10px;
 }
 
