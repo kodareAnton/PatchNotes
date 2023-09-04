@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Page_One.css';
 
 export function Page_One() {
+  // skappa till snyggare
   const navigate = useNavigate();
   function redirectFortnite() {
     console.log('hej');
