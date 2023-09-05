@@ -10,6 +10,8 @@ export function D4() {
     axios
       .get('http://localhost:3000/games/d4')
       .then((res) => {
+        setPatchNotes(res.data);
+
         const htmlString = res.data;
 
         // Create a DOMParser to parse the HTML string

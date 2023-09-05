@@ -5,21 +5,9 @@ var logger = require('morgan');
 var cors = require("cors");
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var gamesRouter = require('./routes/games');
 
 var app = express();
-
-const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect('mongodb://127.0.0.1:27017',{
-    useUnifiedTopology: true
-})
-.then(client => {
-    console.log('Du är uppkopplad till databasen');
-    // kolla om users är något annat
-    const db = client.db('mydbusers');
-    app.locals.db = db;
-})
 
 app.use(cors());
 
@@ -33,9 +21,7 @@ app.get('/health', (req, res) => {
     res.status(200).send('Ok');
   });
 
-
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/games', gamesRouter);
 
 module.exports = app;
