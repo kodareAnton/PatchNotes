@@ -3,6 +3,7 @@ var router = express.Router();
 const axios = require('axios');
 const cheerio = require('cheerio');
 var HTMLParser = require('node-html-parser');
+const { parse } = require('node-html-parser')
 
 router.get('/', function (req, res, next) {
   const Html = ` 
@@ -36,23 +37,37 @@ router.get('/d4', function (req, res, next) {
 });
 
 // CounterStrike end tag
-router.get('/cs', function (req, res, next) {
+router.get('/cs', function (req, res) {
   const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
 
   // Make a GET request
   axios
     .get(apiUrl)
     .then((response) => {
-      var patchArray = ['anton', 'david', 'oliver'];
 
-      var test = HTMLParser.parse(response);
+      var sendArray = []
 
-      res.json(patchArray);
+      const html = response.data
+      const content = parseHTML(html)
+
+      
+      res.send(content)
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
     });
+
+    function parseHTML(html){
+      const root = parse(html);
+      const contentElement = root.querySelector('#post_container');
+
+      if (contentElement){
+        return contentElement.innerHTML
+      } else{
+        return 'content not found'
+      }
+    }
 });
 
 // OverWatch 2 end tag
