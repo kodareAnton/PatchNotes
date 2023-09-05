@@ -80,9 +80,10 @@ Valorant: https://valorant-api.com/
 
 # Start project
 
+## react
+
 npm run dev
 
-# login
+## Nodejs
 
-name: Anton
-password: 123
+npm run start:dev
