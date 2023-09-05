@@ -50,7 +50,6 @@ router.get('/cs', function (req, res) {
       const html = response.data
       const content = parseHTML(html)
 
-      
       res.send(content)
     })
     .catch((error) => {
