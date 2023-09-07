@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const axios = require('axios');
 const cheerio = require('cheerio');
-var HTMLParser = require('node-html-parser');
 const { parse } = require('node-html-parser')
 
 router.get('/', function (req, res, next) {
@@ -44,13 +43,12 @@ router.get('/cs', function (req, res) {
   axios
     .get(apiUrl)
     .then((response) => {
-
-      var sendArray = []
-
       const html = response.data
       const content = parseHTML(html)
 
-      res.send(content)
+      console.log(content);
+
+      res.json(content)
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
@@ -58,14 +56,27 @@ router.get('/cs', function (req, res) {
     });
 
     function parseHTML(html){
-      const root = parse(html);
-      const contentElement = root.querySelector('#post_container');
 
-      if (contentElement){
-        return contentElement.innerHTML
-      } else{
-        return 'content not found'
-      }
+      var sendArray = []
+      const root = parse(html);
+      root.querySelectorAll('.inner_post').map((inner_post)=>{
+        const patchNumber = inner_post.querySelector('a').innerText;
+
+        sendArray.push({
+          patchNumber: patchNumber,
+          detailsHTML: `${inner_post}`
+        })
+
+      })
+      
+      return sendArray
+      // if (contentElement){
+      //   return contentElement.innerHTML
+      // } else{
+      //   return 'content not found'
+      // }
+      return 
+
     }
 });
 
