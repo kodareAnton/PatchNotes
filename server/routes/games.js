@@ -6,7 +6,7 @@ var HTMLParser = require('node-html-parser');
 const { parse } = require('node-html-parser')
 
 router.get('/', function (req, res, next) {
-  const Html = ` 
+  const Html =`
   <h1>Välkommen till min Patchnotes backend!</h1>
   `;
   res.send(Html);
