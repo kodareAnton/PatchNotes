@@ -62,6 +62,10 @@ router.get('/cs', function (req, res) {
       root.querySelectorAll('.inner_post').map((inner_post)=>{
         const patchNumber = inner_post.querySelector('a').innerText;
 
+        const p = inner_post.querySelectorAll('p')
+
+        console.log('längd på p tagg ' + p);
+
         sendArray.push({
           patchNumber: patchNumber,
           detailsHTML: `${inner_post}`
