@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { parse } = require('node-html-parser')
+const { parse } = require('node-html-parser');
 
 router.get('/', function (req, res, next) {
-  const Html =`
+  const Html = `
   <h1>Välkommen till min Patchnotes backend!</h1>
   `;
   res.send(Html);
@@ -43,46 +43,59 @@ router.get('/cs', function (req, res) {
   axios
     .get(apiUrl)
     .then((response) => {
-      const html = response.data
-      const content = parseHTML(html)
+      const html = response.data;
+      const content = parseHTML(html);
 
       console.log(content);
 
-      res.json(content)
+      res.json(content);
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
     });
 
-    function parseHTML(html){
+  function parseHTML(html) {
+    var sendArray = [];
 
-      var sendArray = []
-      const root = parse(html);
-      root.querySelectorAll('.inner_post').map((inner_post)=>{
-        const patchNumber = inner_post.querySelector('a').innerText;
+    const root = parse(html);
+    root.querySelectorAll('.inner_post').map((inner_post) => {
+      const patchNumber = inner_post.querySelector('a').innerText;
+      const p = inner_post.querySelectorAll('p');
 
-        const p = inner_post.querySelectorAll('p')
+      const pp = p.map((p) => {
+        console.log(p.innerText);
+        return p.innerText;
+      });
 
-        console.log('längd på p tagg ' + p);
+      const newArray = splitStringArrayOnDelimiter(pp);
+      const sec = splitStringArrayOnDelimiter(newArray, '&#8211')
 
-        sendArray.push({
-          patchNumber: patchNumber,
-          detailsHTML: `${inner_post}`
-        })
+      console.log(sec);
 
-      })
-      
-      return sendArray
-      // if (contentElement){
-      //   return contentElement.innerHTML
-      // } else{
-      //   return 'content not found'
-      // }
-      return 
+      sendArray.push({
+        patchNumber: patchNumber,
+        info: sec,
+        date: sec[0].slice(0, 10),
+        title: sec[1],
+      });
+    });
 
-    }
+    return sendArray;
+  }
 });
+
+function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
+
+  const splitArr = []
+
+  strArr.forEach((ele) => {
+    const split = ele.split(delimiter);
+    splitArr.push(...split)
+  });
+
+  return splitArr
+}
 
 // OverWatch 2 end tag
 router.get('/overwatch', function (req, res, next) {
