@@ -20,14 +20,33 @@ router.get('/d4', function (req, res, next) {
   axios
     .get(apiUrl)
     .then((response) => {
-      const htmlContent = response.data;
+      const html = response.data;
+      const content = parseHTML(html);
 
-      // const $ = cheerio.load(htmlContent)
-      // const patchnotes = $('.ResponsiveBlogs').html();
-      // const p = $('summary').html();
-      // console.log(p);
+      res.send(content);
 
-      res.json('D5');
+      function parseHTML(html) {
+        const root = parse(html);
+        const details = root.querySelectorAll('details');
+
+        // looping ever detail html tag
+        const extractedHTML = [];
+        
+        details.forEach((detail) => {
+          const title = detail.querySelector('summary').textContent
+   
+          // making my array
+          const detailData = {
+            patchNumber: title,
+            content: detail.innerHTML,
+          }
+          extractedHTML.push(detailData);
+        });
+
+        return extractedHTML;
+        
+        // const AllPatchNotes = article.querySelector('details')
+      }
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
@@ -69,7 +88,7 @@ router.get('/cs', function (req, res) {
       });
 
       const newArray = splitStringArrayOnDelimiter(pp);
-      const sec = splitStringArrayOnDelimiter(newArray, '&#8211')
+      const sec = splitStringArrayOnDelimiter(newArray, '&#8211');
 
       console.log(sec);
 
@@ -86,15 +105,14 @@ router.get('/cs', function (req, res) {
 });
 
 function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
-
-  const splitArr = []
+  const splitArr = [];
 
   strArr.forEach((ele) => {
     const split = ele.split(delimiter);
-    splitArr.push(...split)
+    splitArr.push(...split);
   });
 
-  return splitArr
+  return splitArr;
 }
 
 // OverWatch 2 end tag

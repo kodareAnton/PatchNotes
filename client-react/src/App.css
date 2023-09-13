@@ -14,7 +14,7 @@ body {
   padding: 0;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(#202020, #000000);
+  background: linear-gradient(0.25turn, #000000, #2f2e33, #000000);
 }
 
 button {
@@ -50,12 +50,11 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 3%;
   margin-left: 30%;
   margin-right: 30%;
 }
 
-ul {
+#navText {
   margin: 0px;
   font-size: 1rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
