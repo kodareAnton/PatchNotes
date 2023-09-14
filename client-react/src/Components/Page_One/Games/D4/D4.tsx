@@ -30,7 +30,6 @@ export function D4() {
     <div>
       {patchNotes.map((item, index) => (
         <div id="Diablo4" key={index}>
-          <strong>{item.patchNumber}</strong>
           <div dangerouslySetInnerHTML={{ __html: item.content }} />
         </div>
       ))}
