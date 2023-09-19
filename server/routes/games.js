@@ -80,10 +80,19 @@ router.get('/cs', function (req, res) {
     const root = parse(html);
     root.querySelectorAll('.inner_post').map((inner_post) => {
       const patchNumber = inner_post.querySelector('a').innerText;
+      const datePost = inner_post.querySelector('.post_date')
+      const date = datePost.innerText
+      const imgDate = datePost.innerHTML
+
+
       const p = inner_post.querySelectorAll('p');
+      p[0].remove();
+
+      console.log(p);
+
 
       const pp = p.map((p) => {
-        console.log(p.innerText);
+        
         return p.innerText;
       });
 
@@ -94,9 +103,9 @@ router.get('/cs', function (req, res) {
 
       sendArray.push({
         patchNumber: patchNumber,
-        info: sec,
-        date: sec[0].slice(0, 10),
-        title: sec[1],
+        postDate: date,
+        csLogo: imgDate,
+        info: pp
       });
     });
 
