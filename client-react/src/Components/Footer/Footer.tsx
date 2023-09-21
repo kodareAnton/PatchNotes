@@ -7,11 +7,11 @@ export function Footer() {
       <div className="FooterBottom">
         <GitHub />
       </div>
-      <p className="line">|</p>
+      <p className="footerSeperator">|</p>
       <div className="FooterBottom">
         <Instagram />
       </div>
-      <p className="line">|</p>
+      <p className="footerSeperator">|</p>
       <div>
         {' '}
         <Linkedin />

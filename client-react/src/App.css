@@ -182,10 +182,6 @@ a {
     animation-duration: 0.3s;
   }
 
-  #Footer {
-    display: block;
-  }
-
   /* animationen */
   @keyframes open {
     from {
