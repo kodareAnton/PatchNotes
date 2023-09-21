@@ -30,24 +30,32 @@ export function Page_One() {
     <>
       <div id="container_games">
         <div className="game" onClick={redirectD4}>
-          <h2>Diablo 4</h2>
-          <img className="gameImg" src="img/Diablo-4-Patch.jpg"></img>
+          {/* <img className="gameImgOverlay" src="img/diablo4-logo.webp"></img> */}
+          <img className="gameImg" src="img/diablo4.webp"></img>
+          <h2>Diablo IV</h2>
+          <p className="gameimginfo">Action RPG</p>
         </div>
         <div className="game" onClick={redirectCs}>
-          <h2>Cs</h2>
-          <img className="gameImg" src="img/CsGo.jpg"></img>
+          <img className="gameImg" src="img/cs2.jpg"></img>
+          <h2>Cs2</h2>
+          <p className="gameimginfo">First Person Shooter</p>
         </div>
         <div className="game" onClick={redirectFortnite}>
+          <img className="gameImg" src="img/fortnite.png"></img>
           <h2>Fortnite</h2>
-          <img className="gameImg" src="img/Fortnite.jpg"></img>
+          <p className="gameimginfo">Battle royale</p>
         </div>
         <div className="game" onClick={redirectValorant}>
+          <img className="gameImg" src="img/valorant.webp"></img>
           <h2>Valorant</h2>
-          <img className="gameImg" src="img/Valorant.png"></img>
+          <p className="gameimginfo">Hero shooter Tactical shooter</p>
         </div>
         <div className="game" onClick={redirectOverwatch}>
+          {/* <img className="gameImg" src="img/overwatch2-logo.webp"></img> */}
+          <img className="gameImg" src="img/overwatch2.webp"></img>
           <h2>Overwatch 2</h2>
-          <img className="gameImg" src="img/Overwatch_2.jpg"></img>
+          <p className="gameimginfo">Team-Based Action</p>
+          <p></p>
         </div>
       </div>
     </>

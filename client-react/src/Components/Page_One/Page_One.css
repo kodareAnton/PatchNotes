@@ -11,6 +11,10 @@
   animation: scrolling 15s linear infinite; */
 }
 
+h2 {
+  margin-bottom: 0px;
+}
+
 @keyframes scrolling {
   0% {
     transform: translateX(-20%);
@@ -21,22 +25,35 @@
 }
 
 .game {
-  height: 12rem;
+  position: relative;
+  height: 300px;
+  width: 200px;
   margin: 1%;
   cursor: pointer;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.966);
   border-radius: 5%;
 }
 
-.game:hover {
-  background-color: rgb(31, 31, 31);
-  filter: drop-shadow(5px 5px 4px #00ff0033);
-  border: 1px solid green;
+.gameImg {
+  font-family: 'Poppins', sans-serif;
+  width: 200px; /* Initial width */
+  height: auto; /* Maintain aspect ratio */
+  transition: all 0.3s ease; /* Add a smooth transition effect */
+  filter: drop-shadow(5px 3px 2px #00000049);
 }
 
-.gameImg {
-  width: 100%;
+/* .gameImgOverlay {
+  position: absolute;
+} */
+
+.gameImg:hover {
+  transform: scale(1.05); /* Scale the image on hover */
+  filter: drop-shadow(10px 5px 2px #00000049);
+}
+
+.gameimginfo {
+  color: rgba(208, 233, 255, 0.6);
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 500px) {
