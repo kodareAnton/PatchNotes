@@ -17,6 +17,22 @@ body {
   background: linear-gradient(0.25turn, #09203f, #537895, #09203f);
 }
 
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.603); */
+  font-family: 'Poppins', sans-serif;
+  filter: drop-shadow(5px 3px 2px #00000049);
+}
+
+.title {
+  border-bottom: 1px solid white;
+}
+
+.title:hover {
+  filter: drop-shadow(6px 4px 3px #00000049);
+}
+
 button {
   height: 25px;
   color: rgb(255, 255, 255);
@@ -69,12 +85,6 @@ nav {
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-}
-
-a:hover {
-  background: -webkit-linear-gradient(rgb(12, 141, 18), rgb(255, 255, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #loginBtn {

@@ -1,15 +1,15 @@
 #Footer {
   height: 9rem;
   color: white;
-  /* background-color: #070420; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 .line {
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.438);
+  margin-right: 5px;
 }
 
 p {

@@ -32,38 +32,24 @@ export function Fortnite() {
 
   // skriver ut all undermenyer som tillhör spelet med en map function
   const APIList = API.map((list, index) => {
-    const randomColor1 = Math.floor(Math.random() * 255);
-    const randomColor2 = Math.floor(Math.random() * 255);
-
     // skriver ut Nav listan
     return (
-      <div key={index} data-index={index}>
-        <li
-          id="random"
-          style={{
-            color: `rgba(255,${randomColor1},${randomColor2})`,
-            border: `1px solid rgba(255,${randomColor1},${randomColor2} `,
-          }}
-        >
+      <ul key={index} data-index={index}>
+        <li id="random">
           {' '}
-          <Link
-            style={{
-              color: `rgba(255,${randomColor1},${randomColor2})`,
-            }}
-            to={`/Page_one/Fortnite/${list.link}`}
-          >
-            {' '}
-            {list.name}
-          </Link>
+          <Link to={`/Page_one/Fortnite/${list.link}`}> {list.name}</Link>
         </li>
-      </div>
+      </ul>
     );
   });
 
   return (
     <>
       <h1 id="Fortnite">Fortnite</h1>
-      <ul id="randomDiv">{APIList}</ul>
+      <div id="randomDiv">
+        <p className="extra">EXTRA</p>
+        {APIList}
+      </div>
 
       <CheckComponent />
     </>

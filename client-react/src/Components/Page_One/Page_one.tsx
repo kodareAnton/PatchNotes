@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Page_One.css';
+import { Xbox, Playstation, Steam } from 'react-bootstrap-icons';
 
 export function Page_One() {
   // skappa till snyggare
@@ -34,27 +35,48 @@ export function Page_One() {
           <img className="gameImg" src="img/diablo4.webp"></img>
           <h2>Diablo IV</h2>
           <p className="gameimginfo">Action RPG</p>
+          <div>
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
         </div>
         <div className="game" onClick={redirectCs}>
           <img className="gameImg" src="img/cs2.jpg"></img>
           <h2>Cs2</h2>
           <p className="gameimginfo">First Person Shooter</p>
+          <div>
+            <Steam className="gameIcons" />
+          </div>
         </div>
         <div className="game" onClick={redirectFortnite}>
           <img className="gameImg" src="img/fortnite.png"></img>
           <h2>Fortnite</h2>
           <p className="gameimginfo">Battle royale</p>
+          <div>
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
         </div>
         <div className="game" onClick={redirectValorant}>
           <img className="gameImg" src="img/valorant.webp"></img>
           <h2>Valorant</h2>
           <p className="gameimginfo">Hero shooter Tactical shooter</p>
+          <div>
+            <Steam className="gameIcons" />
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
         </div>
         <div className="game" onClick={redirectOverwatch}>
           {/* <img className="gameImg" src="img/overwatch2-logo.webp"></img> */}
           <img className="gameImg" src="img/overwatch2.webp"></img>
           <h2>Overwatch 2</h2>
           <p className="gameimginfo">Team-Based Action</p>
+          <div>
+            <Steam className="gameIcons" />
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
           <p></p>
         </div>
       </div>
