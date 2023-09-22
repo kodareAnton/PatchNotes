@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Diablo4Component } from './Components/diablo4/diablo4.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Diablo4Component,
   ],
   imports: [
     BrowserModule,
