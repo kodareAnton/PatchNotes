@@ -125,16 +125,43 @@ function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
 }
 
 // OverWatch 2 end tag
-router.get('/overwatch', function (req, res, next) {
+router.get('/overwatch2', function (req, res, next) {
   apiUrl = 'https://overwatch.blizzard.com/en-us/news/patch-notes/';
 
   // Make a GET request
   axios
     .get(apiUrl)
     .then((response) => {
-      const htmlContent = response.data;
+      const html = response.data;
+      const content = parseHTML(html);
 
-      res.send(htmlContent);
+      res.send(content);
+
+      function parseHTML(html) {
+        const root = parse(html);
+        const details = root.querySelectorAll('.PatchNotes-body');
+
+        // looping ever detail html tag
+        const extractedHTML = [];
+        
+        details.forEach((detail) => {
+          const patchnotesBox = detail.querySelectorAll('PatchNotes-patch PatchNotes-live')
+          // patchnotesBox.map((patchnote)=>{
+
+          //   const title = patchnote.querySelector('.PatchNotes-patchTitle')
+
+          //   // making my array
+          //   const detailData = {
+          //     patchNumber: title,
+          //   // content: detail.innerHTML,
+          // }
+          // extractedHTML.push(detailData);
+          // })
+        });
+
+        return extractedHTML;
+        // const AllPatchNotes = article.querySelector('details')
+      }
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
