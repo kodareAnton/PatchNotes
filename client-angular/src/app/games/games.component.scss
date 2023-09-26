@@ -1,0 +1,34 @@
+#gamelist {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+
+  .game {
+    width: 200px;
+    margin: 1%;
+
+    cursor: pointer;
+    border-radius: 5%;
+
+    img {
+      position: relative;
+      font-family: "Poppins", sans-serif;
+      width: 200px; /* Initial width */
+      height: 300px;
+      transition: all 0.3s ease; /* Add a smooth transition effect */
+      filter: drop-shadow(5px 3px 2px #00000049);
+      object-fit: cover;
+    }
+
+    img:hover {
+      transform: scale(1.05); /* Scale the image on hover */
+      filter: drop-shadow(10px 5px 2px #00000049);
+    }
+
+    p {
+      color: rgba(208, 233, 255, 0.6);
+      text-transform: uppercase;
+      font-size: small;
+    }
+  }
+}
