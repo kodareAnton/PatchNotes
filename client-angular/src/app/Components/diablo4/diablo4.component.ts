@@ -9,7 +9,6 @@ import { Diablo4Data } from 'src/app/models/Diabl4Data.model';
 })
 export class Diablo4Component implements OnInit {
   
-
   fetchedData: Diablo4Data[] = [];
   
   constructor(private dataService: FetchDataDiablo4Service){}
