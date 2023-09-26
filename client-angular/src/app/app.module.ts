@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Diablo4Component } from './Components/diablo4/diablo4.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
-import { GamesComponent } from './games/games.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { GamesComponent } from './Components/games/games.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 @NgModule({

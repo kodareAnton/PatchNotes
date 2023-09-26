@@ -5,7 +5,7 @@ import { Diablo4Data } from 'src/app/models/Diabl4Data.model';
 @Component({
   selector: 'app-diablo4',
   templateUrl: './diablo4.component.html',
-  styleUrls: ['./diablo4.component.sass']
+  styleUrls: ['./diablo4.component.scss']
 })
 export class Diablo4Component implements OnInit {
 

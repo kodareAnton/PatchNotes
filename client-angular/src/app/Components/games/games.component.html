@@ -1,5 +1,5 @@
 <div id="gamelist">
-  <div class="game" *ngFor="let game of games">
+  <div class="game" routerLink="{{ game.router }}" *ngFor="let game of games">
     <img class="gamesImg" src="{{ game.src }}" alt="{{ game.name }}" />
     <h2>{{ game.name }}</h2>
     <p class="gameImgInfo">{{ game.genre }}</p>
