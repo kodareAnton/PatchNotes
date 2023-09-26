@@ -8,6 +8,7 @@ import { Diablo4Data } from 'src/app/models/Diabl4Data.model';
   styleUrls: ['./diablo4.component.scss']
 })
 export class Diablo4Component implements OnInit {
+  
 
   fetchedData: Diablo4Data[] = [];
   

@@ -15,6 +15,11 @@ nav {
   margin-right: 30%;
 }
 
-.title {
+#title {
   border-bottom: 1px solid white;
+}
+
+#title:hover {
+  cursor: pointer;
+  filter: drop-shadow(6px 4px 3px #00000049);
 }
