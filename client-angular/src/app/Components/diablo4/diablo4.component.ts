@@ -17,7 +17,7 @@ export class Diablo4Component implements OnInit {
   }
 
   fetchData(): void{
-    this.dataService.fetchData().subscribe(
+    this.dataService.getData().subscribe(
       (data) =>{
         this.fetchedData = data;
       },
@@ -26,4 +26,6 @@ export class Diablo4Component implements OnInit {
       }
     )
   }
+
+
 }

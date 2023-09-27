@@ -31,20 +31,20 @@ router.get('/d4', function (req, res, next) {
 
         // looping ever detail html tag
         const extractedHTML = [];
-        
+
         details.forEach((detail) => {
-          const title = detail.querySelector('summary').textContent
-   
+          const title = detail.querySelector('summary').textContent;
+
           // making my array
           const detailData = {
             patchNumber: title,
             content: detail.innerHTML,
-          }
+          };
           extractedHTML.push(detailData);
         });
 
         return extractedHTML;
-        
+
         // const AllPatchNotes = article.querySelector('details')
       }
     })
@@ -80,32 +80,23 @@ router.get('/cs', function (req, res) {
     const root = parse(html);
     root.querySelectorAll('.inner_post').map((inner_post) => {
       const patchNumber = inner_post.querySelector('a').innerText;
-      const datePost = inner_post.querySelector('.post_date')
-      const date = datePost.innerText
-      const imgDate = datePost.innerHTML
-
+      const datePost = inner_post.querySelector('.post_date');
+      const imgDate = datePost.innerHTML;
 
       const p = inner_post.querySelectorAll('p');
       p[0].remove();
 
-      console.log(p);
-
-
       const pp = p.map((p) => {
-        
         return p.innerText;
       });
 
       const newArray = splitStringArrayOnDelimiter(pp);
       const sec = splitStringArrayOnDelimiter(newArray, '&#8211');
 
-      console.log(sec);
-
       sendArray.push({
         patchNumber: patchNumber,
-        postDate: date,
-        csLogo: imgDate,
-        info: pp
+        csLogo: imgDate.slice(15),
+        info: pp,
       });
     });
 
@@ -134,29 +125,48 @@ router.get('/overwatch2', function (req, res, next) {
     .then((response) => {
       const html = response.data;
       const content = parseHTML(html);
-
+      console.log(content);
       res.send(content);
 
       function parseHTML(html) {
         const root = parse(html);
-        const details = root.querySelectorAll('.PatchNotes-body');
+        const details = root.querySelector('.PatchNotes-body');
 
         // looping ever detail html tag
         const extractedHTML = [];
-        
-        details.forEach((detail) => {
-          const patchnotesBox = detail.querySelectorAll('PatchNotes-patch PatchNotes-live')
-          // patchnotesBox.map((patchnote)=>{
 
-          //   const title = patchnote.querySelector('.PatchNotes-patchTitle')
+        const patchnotes = details.querySelectorAll('.PatchNotes-live');
 
-          //   // making my array
-          //   const detailData = {
-          //     patchNumber: title,
-          //   // content: detail.innerHTML,
-          // }
-          // extractedHTML.push(detailData);
-          // })
+        patchnotes.forEach((patchnote) => {
+
+          // taking out the head title in every sector
+          const title = patchnote.querySelector(
+            '.PatchNotes-patchTitle'
+          ).innerText;
+
+          const patchnotesSections = patchnote.querySelectorAll('.PatchNotes-section')
+          const patchnotesSection = patchnotesSections.forEach((patchnotesection)=>{
+
+            var sectionList = []
+            
+            const PatchNotesSectionTitle = patchnotesection.querySelector('.PatchNotes-sectionTitle').innerText
+
+            const detailData = {
+              patchNotesTitle: PatchNotesSectionTitle
+            }
+
+            sectionList.push(detailData)
+            return sectionList
+
+          })
+
+          // making my array
+          const detailData = {
+            content: patchnote.toString(),
+            title: title,
+            Sections: ''
+          };
+          extractedHTML.push(detailData);
         });
 
         return extractedHTML;
