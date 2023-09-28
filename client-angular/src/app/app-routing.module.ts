@@ -14,7 +14,7 @@ const diablo4Guard:CanActivateFn = function(route: ActivatedRouteSnapshot, state
   loading.start();
 
   return fetchd4Service.fetchData().pipe(
-    delay(10000),
+    delay(2000),
     map((data)=>{
       console.log(data);
       loading.stop();

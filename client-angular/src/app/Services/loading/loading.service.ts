@@ -7,9 +7,10 @@ export class LoadingService {
 
   constructor() { }
 
-  start(){
-    console.log('start loading');
-    
+  start(): void {
+    alert('start loading');
+    const body = document.getElementsByTagName('body')[0]
+    body.id = 'loading'
   };
 
   stop(){
