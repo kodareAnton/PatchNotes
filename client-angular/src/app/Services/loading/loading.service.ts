@@ -8,7 +8,6 @@ export class LoadingService {
   constructor() { }
 
   start(): void {
-    alert('start loading');
     const body = document.getElementsByTagName('body')[0]
     body.id = 'loading'
   };
