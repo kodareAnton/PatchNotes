@@ -70,7 +70,7 @@ export function Page_One() {
         <div className="game" onClick={redirectValorant}>
           <img className="gameImg" src="img/valorant.webp" alt="valorant"></img>
           <h2>Valorant</h2>
-          <p className="gameimginfo">Hero shooter Tactical shooter</p>
+          <p className="gameimginfo">Hero/Tactical shooter</p>
           <div>
             <Steam className="gameIcons" />
             <Xbox className="gameIcons" />
