@@ -7,7 +7,7 @@ export function Cs() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/games/cs')
+      .get(`https://patch-notes-server-nextjs.vercel.app/api/games/cs`)
       .then((res) => {
         const htmlString = res.data;
         console.log(htmlString);

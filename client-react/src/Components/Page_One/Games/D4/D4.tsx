@@ -8,7 +8,7 @@ export function D4() {
 
   useEffect(() => {
     axios
-      .get<IPatchnotes[]>('http://localhost:3000/games/d4')
+      .get<IPatchnotes[]>(`https://patch-notes-server-nextjs.vercel.app/api/games/d4`)
       .then((res) => {
         setPatchNotes(res.data);
       })

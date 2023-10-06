@@ -7,7 +7,7 @@ export function Overwatch() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/games/overwatch')
+      .get(`https://patch-notes-server-nextjs.vercel.app/api/games/overwatch`)
       .then((res) => {
         const htmlString = res.data;
 
