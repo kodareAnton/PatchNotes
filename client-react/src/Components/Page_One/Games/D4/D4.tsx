@@ -3,12 +3,14 @@ import { useEffect, useState } from 'react';
 import './D4.css';
 
 export function D4() {
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+
   const [patchNotes, setPatchNotes] = useState<IPatchnotes[]>();
   console.log(patchNotes);
 
   useEffect(() => {
     axios
-      .get<IPatchnotes[]>(`https://patch-notes-server-nextjs.vercel.app/api/games/d4`)
+      .get<IPatchnotes[]>(`${baseUrl}/games/d4`)
       .then((res) => {
         setPatchNotes(res.data);
       })
