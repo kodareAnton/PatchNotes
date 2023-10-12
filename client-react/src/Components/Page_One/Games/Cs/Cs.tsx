@@ -47,7 +47,6 @@ export function Cs() {
   return (
     <>
       {' '}
-      <h1>CsGo Patch Notes</h1>
       <div className="patchNotes">{print}</div>
     </>
   );

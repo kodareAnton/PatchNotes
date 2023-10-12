@@ -38,7 +38,7 @@ h2 {
   filter: drop-shadow(5px 3px 2px #00000049);
 }
 
-.WIP::after {
+/* .WIP::after {
   content: 'WIP!';
   position: absolute;
   top: 0;
@@ -47,7 +47,7 @@ h2 {
   right: 0;
   font-size: 1.3rem;
   color: rgb(255, 238, 4);
-}
+} */
 .gameIcons {
   opacity: 0.6;
   margin-right: 5px;
@@ -63,6 +63,14 @@ h2 {
   text-transform: uppercase;
 }
 
+.WIP {
+  text-align: center;
+  width: 30px;
+  color: rgba(255, 230, 0, 0.705);
+  border: 1px solid rgba(255, 230, 0, 0.705);
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 500px) {
   .gameImg {
     height: 300px;
@@ -70,7 +78,15 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
+  nav {
+    margin: 0;
+  }
+
+  #container_games {
+    justify-content: center;
+  }
+
   .game {
-    margin: 0%;
+    margin: 5%;
   }
 }

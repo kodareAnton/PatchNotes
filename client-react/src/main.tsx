@@ -19,9 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <App />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Page_One />} />
-        {/* <Route path="/Login" element={<Login />} /> */}
         <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
         <Route path="/Page_one/Fortnite/:id" element={<Fortnite />} />
         <Route path="/Page_one/Valorant" element={<Valorant />} />
@@ -31,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/Page_one/Overwatch" element={<Overwatch />} />
         <Route path="*" />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

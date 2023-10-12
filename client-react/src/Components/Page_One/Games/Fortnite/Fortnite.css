@@ -21,7 +21,7 @@
 
 #random:hover {
   cursor: pointer;
-  border-bottom: 2px solid red;
+  background-color: #383737;
 }
 
 .ForniteIcons {
