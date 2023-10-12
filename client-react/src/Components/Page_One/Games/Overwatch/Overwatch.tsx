@@ -2,14 +2,17 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 export function Overwatch() {
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+
   const [patchNotes, setPatchNotes] = useState('');
   console.log('patchnotes:', patchNotes);
 
   useEffect(() => {
     axios
-      .get(`https://patch-notes-server-nextjs.vercel.app/api/games/overwatch`)
+      .get(`${baseUrl}/games/overwatch2`)
       .then((res) => {
         const htmlString = res.data;
+        setPatchNotes(res.data);
 
         // Create a DOMParser to parse the HTML string
         const parser = new DOMParser();
@@ -36,7 +39,6 @@ export function Overwatch() {
   return (
     <>
       <h1>Overwatch</h1>
-
       <p className="Blizzard">Blizzard Entertainment</p>
       <div className="patchNotes">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
