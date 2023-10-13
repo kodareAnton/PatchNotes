@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './D4.css';
 
 export function D4() {
-  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const baseUrl = import.meta.env.VITE_REACT_APP_PATCH_NOTES_API_HOST;
 
   const [patchNotes, setPatchNotes] = useState<IPatchnotes[]>();
   console.log(patchNotes);

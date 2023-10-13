@@ -33,7 +33,7 @@ export function Page_One() {
       <div id="container_games">
         <div className="game" onClick={redirectD4}>
           {/* <img className="gameImgOverlay" src="img/diablo4-logo.webp"></img> */}
-          <img className="gameImg" src="img/diablo4.webp" alt="diablo4"></img>
+          <img className="gameImg" src="img/diablo4.jpg" alt="diablo4"></img>
           <h2>Diablo IV</h2>
           <p className="gameimginfo">Action RPG</p>
           <div>
@@ -71,7 +71,7 @@ export function Page_One() {
           <p className="WIP">WIP</p>
         </div>
         <div className="game" onClick={redirectValorant}>
-          <img className="gameImg" src="img/valorant.webp" alt="valorant"></img>
+          <img className="gameImg" src="img/valorant.jpg" alt="valorant"></img>
           <h2>Valorant</h2>
           <p className="gameimginfo">Hero/Tactical shooter</p>
           <div className="icon">
@@ -84,7 +84,7 @@ export function Page_One() {
         <div className="game" onClick={redirectOverwatch}>
           <img
             className="gameImg"
-            src="img/overwatch2.webp"
+            src="img/overwatch2.jpg"
             alt="overwatch2"
           ></img>
           <h2>Overwatch 2</h2>

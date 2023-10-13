@@ -14,6 +14,7 @@ export class GamesComponent {
       src: '../../assets/images/diablo4.webp',
       router: 'diablo4',
       icons: '',
+      isWip: false,
     },
     {
       name: 'Cs2',
@@ -21,20 +22,23 @@ export class GamesComponent {
       src: '../../assets/images/cs2.jpg',
       router: 'diablo4',
       icons: '',
+      isWip: true,
     },
     {
       name: 'Fortnite',
-      genre: 'battle royal',
+      genre: 'battle royale',
       src: '../../assets/images/fortnite.png',
       router: 'diablo4',
       icons: '',
+      isWip: true,
     },
     {
       name: 'Valorant',
-      genre: 'hero shooter / tactical shooter',
+      genre: 'hero/tactical shooter',
       src: '../../assets/images/valorant.webp',
       router: 'diablo4',
       icons: '',
+      isWip: true,
     },
     {
       name: 'Overwatch 2',
@@ -42,6 +46,7 @@ export class GamesComponent {
       src: '../../assets/images/overwatch2.webp',
       router: 'diablo4',
       icons: '',
+      isWip: true,
     }
   ]
 
