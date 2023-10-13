@@ -1,4 +1,6 @@
 # Patchnotes for games
+Angular live: https://patch-notes-angular.vercel.app/
+React live: https://patch-notes-react.vercel.app/
 
 ## kodareAnton
 
