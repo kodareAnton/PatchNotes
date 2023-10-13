@@ -1,5 +1,5 @@
 # Patchnotes for games
-Angular live: https://patch-notes-angular.vercel.app/
+Angular live: https://patch-notes-angular.vercel.app/ < /br>
 React live: https://patch-notes-react.vercel.app/
 
 ## About
