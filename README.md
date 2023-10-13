@@ -2,11 +2,11 @@
 Angular live: https://patch-notes-angular.vercel.app/
 React live: https://patch-notes-react.vercel.app/
 
-## kodareAnton
+## About
+This project was create for private use for me to have a webbsite that collect patchnotes from my favorite games all on the same site. 
 
 ## Tech stack
-
-- react vite
+- react + vite
 - angular
 - typescript
 - css
@@ -15,18 +15,17 @@ React live: https://patch-notes-react.vercel.app/
 - nextjs + express
 
 ### npm packages
-
 - react-router-dom
 - axios
 - feather-icons
-- HTMLParser
+- node-html-parser
+- express
 
 References
 
 API's
 Fortnite: https://fortnite-api.com/
 Valorant: https://valorant-api.com/
-
 
 # Start project
 
