@@ -11,8 +11,8 @@ React live: https://patch-notes-react.vercel.app/
 - typescript
 - css
 - scss
-- nodejs
-- nextjs
+- nodejs + express
+- nextjs + express
 
 ### npm packages
 
