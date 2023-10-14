@@ -45,7 +45,6 @@ export function Fortnite() {
 
   return (
     <>
-      <h1 id="Fortnite">Fortnite</h1>
       <div id="randomDiv">
         <p className="extra">EXTRA</p>
         {APIList}

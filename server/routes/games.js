@@ -154,7 +154,6 @@ router.get('/overwatch2', function (req, res, next) {
             const detailData = {
               patchNotesTitle: PatchNotesSectionTitle
             }
-
             sectionList.push(detailData)
             return sectionList
 
@@ -164,7 +163,7 @@ router.get('/overwatch2', function (req, res, next) {
           const detailData = {
             content: patchnote.toString(),
             title: title,
-            Sections: ''
+            sections: 'section'
           };
           extractedHTML.push(detailData);
         });

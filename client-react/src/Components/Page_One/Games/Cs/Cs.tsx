@@ -1,31 +1,53 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './Cs.css';
 
 export function Cs() {
-  const [patchNotes, setPatchNotes] = useState('');
-  console.log('patchnotes:', patchNotes);
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+
+  interface IPatchnotes {
+    patchNumber: string;
+    csLogo: string;
+    info: string;
+  }
+
+  const [patchNotes, setPatchNotes] = useState<IPatchnotes[]>();
 
   useEffect(() => {
     axios
-      .get(`https://patch-notes-server-nextjs.vercel.app/api/games/cs`)
+      .get<IPatchnotes[]>(`${baseUrl}/games/cs`)
       .then((res) => {
         const htmlString = res.data;
-        console.log(htmlString);
-
-    
+        setPatchNotes(htmlString);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
+  if (patchNotes == null) {
+    return null;
+  }
+
+  console.log(patchNotes);
+
+  const print = patchNotes.map((Notes) => {
+    return (
+      <>
+        <div className="flex">
+          <h3>{Notes.patchNumber}</h3>
+          <img src={Notes.csLogo.slice(39, 113)} alt={'CsLogo'} />
+        </div>
+        <br />
+        <p>{Notes.info}</p>{' '}
+      </>
+    );
+  });
+
   return (
     <>
       {' '}
-      <h1>CsGo Patch Notes</h1>
-      <div className="patchNotes">
-       
-      </div>
+      <div className="patchNotes">{print}</div>
     </>
   );
 }

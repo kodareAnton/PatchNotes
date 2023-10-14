@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import { Footer } from './Components/Footer/Footer';
-import { Home } from './Components/Home/Home';
-import { Login } from './Components/Login/Login';
 import { D4 } from './Components/Page_One/Games/D4/D4';
 import { Fortnite } from './Components/Page_One/Games/Fortnite/Fortnite';
 import { Valorant } from './Components/Page_One/Games/Valorant/Valorant';
@@ -21,9 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <App />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Page_One />} />
-        {/* <Route path="/Login" element={<Login />} /> */}
         <Route path="/Page_one/Fortnite/" element={<Fortnite />} />
         <Route path="/Page_one/Fortnite/:id" element={<Fortnite />} />
         <Route path="/Page_one/Valorant" element={<Valorant />} />
@@ -33,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/Page_one/Overwatch" element={<Overwatch />} />
         <Route path="*" />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

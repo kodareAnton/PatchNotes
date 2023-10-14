@@ -37,3 +37,7 @@ blockquote {
   outline-offset: -1px;
   border-left: 5px solid #00aeff;
 }
+
+img {
+  width: 100%;
+}
