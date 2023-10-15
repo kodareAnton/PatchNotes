@@ -46,9 +46,9 @@ export default function handler(req, res) {
       });
     });
 
-    return res.send(sendArray);
+    return sendArray;
   }
 
-  
+  res.send('cs2')
   }
   
