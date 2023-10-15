@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import './Cs.css';
 
 export function Cs() {
-  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  // const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const baseUrl = 'https://patch-notes-server-nextjs.vercel.app/api';
 
   interface IPatchnotes {
     patchNumber: string;
