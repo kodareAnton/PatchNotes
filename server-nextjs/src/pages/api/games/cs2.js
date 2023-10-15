@@ -48,5 +48,7 @@ export default function handler(req, res) {
 
     return sendArray;
   }
+
+  res.send('cs2')
   }
   
