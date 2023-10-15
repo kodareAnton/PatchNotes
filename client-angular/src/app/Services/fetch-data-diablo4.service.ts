@@ -8,7 +8,7 @@ import { __values } from 'tslib';
   providedIn: 'root',
 })
 export class FetchDataDiablo4Service {
-  private baseUrl = 'http://localhost:3000/api/games/d4';
+  private baseUrl = 'https://patch-notes-server-nextjs.vercel.app/api/games/d4';
   private dataSubject: Subject<Diablo4Data[]> = new BehaviorSubject<
     Diablo4Data[]
   >([]);
