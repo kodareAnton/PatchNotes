@@ -45,10 +45,18 @@ export default function handler(req, res) {
         info: pp,
       });
     });
-
-    return sendArray;
   }
 
-  res.send('cs2')
+  res.send(sendArray)
   }
   
+  function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
+    const splitArr = [];
+  
+    strArr.forEach((ele) => {
+      const split = ele.split(delimiter);
+      splitArr.push(...split);
+    });
+  
+    return splitArr;
+  }
