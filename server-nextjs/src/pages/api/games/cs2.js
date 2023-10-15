@@ -1,3 +1,6 @@
+const axios = require('axios');
+const { parse } = require('node-html-parser');
+
 export default function handler(req, res) {
     const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
 
