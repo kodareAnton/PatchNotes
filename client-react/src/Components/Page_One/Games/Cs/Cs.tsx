@@ -16,7 +16,7 @@ export function Cs() {
 
   useEffect(() => {
     axios
-      .get<IPatchnotes[]>(`${baseUrl}/games/cs`)
+      .get<IPatchnotes[]>(`${baseUrl}/games/cs2`)
       .then((res) => {
         const htmlString = res.data;
         setPatchNotes(htmlString);
