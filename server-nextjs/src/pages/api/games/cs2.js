@@ -2,7 +2,8 @@ const axios = require('axios');
 const { parse } = require('node-html-parser');
 
 export default function handler(req, res) {
-    const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
+
+  const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
 
   // Make a GET request
   axios
@@ -19,6 +20,7 @@ export default function handler(req, res) {
       // Handle any errors that occurred during the request
       console.error('Error:', error);
     });
+  }
 
   function parseHTML(html) {
     var sendArray = [];
@@ -45,9 +47,7 @@ export default function handler(req, res) {
         info: pp,
       });
     });
-  }
-
-  res.send(sendArray)
+    return sendArray
   }
   
   function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
