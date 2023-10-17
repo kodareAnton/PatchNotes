@@ -6,8 +6,17 @@
 }
 
 .shopboxo {
-  background-color: rgba(0, 0, 0, 0.801);
+  /* background-color: rgba(0, 0, 0, 0.801); */
   text-align: center;
+}
+
+.itemBox {
+  margin: 5px;
+  filter: drop-shadow(10px 5px 2px #00000015);
+}
+
+.itemBox:hover {
+  background-color: #000000a6;
 }
 
 .itemImg {

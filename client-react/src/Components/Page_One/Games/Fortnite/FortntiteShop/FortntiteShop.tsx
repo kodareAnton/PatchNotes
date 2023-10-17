@@ -276,14 +276,42 @@ export function FortniteShop() {
         return (
           <div className="shopbox" key={bundle.devName}>
             {bundle.items.map((item) => {
+              // fixing colors on rarity
+              var color;
+              var border;
+              if (item.rarity.backendValue === 'EFortRarity::Uncommon') {
+                color = 'radial-gradient(#6abb1e,#175117)';
+                border = '3px solid #88e339';
+              } else if (item.rarity.backendValue === 'EFortRarity::Rare') {
+                color = 'radial-gradient(#2cc0ff,#143877)';
+                border = '3px solid #37d0ff';
+              } else if (item.rarity.backendValue === 'EFortRarity::Epic') {
+                color = 'radial-gradient(#c359ff,#4c2483)';
+                border = '3px solid #ea5eff';
+              } else if (
+                item.rarity.backendValue === 'EFortRarity::Legendary'
+              ) {
+                color = 'radial-gradient(#ea8d23,#78371d)';
+                border = '3px solid #e98d4b';
+              } else {
+                color = 'yellow';
+              }
+
               return (
-                <div className="itemBox" key={item.id}>
-                  <p>{item.name}</p>
+                <div
+                  className="itemBox"
+                  key={item.id}
+                  style={{
+                    border: `${border}`,
+                    background: `${color}`,
+                  }}
+                >
                   <img
                     className="itemImg"
                     src={item.images.smallIcon}
                     alt={item.name}
                   />
+                  <p>{item.name}</p>
                 </div>
               );
             })}
