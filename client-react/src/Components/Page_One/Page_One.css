@@ -1,7 +1,6 @@
 #container_games {
   display: flex;
   flex-wrap: wrap;
-  height: 80vh;
 }
 
 #choose_game {
