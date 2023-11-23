@@ -65,8 +65,6 @@ router.get('/cs', function (req, res) {
       const html = response.data;
       const content = parseHTML(html);
 
-      console.log(content);
-
       res.json(content);
     })
     .catch((error) => {
@@ -102,6 +100,42 @@ router.get('/cs', function (req, res) {
 
     return sendArray;
   }
+});
+
+router.get('/cs2', function (req, res) {
+  const apiUrl = 'https://www.counter-strike.net/news/updates?l=english';
+
+  // Make a GET request
+  axios
+    .get(apiUrl)
+    .then((response) => {
+      const html = response.data;
+      const content = parseHTML(html);
+
+      res.json(content);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during the request
+      console.error('Error:', error);
+    });
+
+    function parseHTML(html) {
+
+      var sendArray = [];
+  
+      const root = parse(html);
+      root.querySelectorAll('.updatecapsule_UpdateCapsule_-Eouv').map((inner_post) => {
+
+        const title = inner_post.querySelector('.updatecapsule_Title_13NfC')
+        console.log(title);
+      
+      sendArray.push({
+        title: 'hej',
+      });
+      });
+
+      return sendArray;
+    }
 });
 
 function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
