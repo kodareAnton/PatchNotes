@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 export function Overwatch() {
-  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const baseUrl = import.meta.env.VITE_REACT_APP_PATCH_NOTES_API_HOST;
 
   interface IPatchnotes {
     content: string;

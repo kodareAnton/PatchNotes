@@ -11,7 +11,7 @@ export function Cs2(){
         info: string;
       }
 
-      const baseUrl = 'http://localhost:3000/' 
+      const baseUrl = import.meta.env.VITE_REACT_APP_PATCH_NOTES_API_HOST;
     
       const [patchNotes, setPatchNotes] = useState<IPatchnotes[]>();
     
