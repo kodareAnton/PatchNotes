@@ -11,6 +11,7 @@ import { Page_One } from './Components/Page_One/Page_one';
 import './index.css';
 import { Cs } from './Components/Page_One/Games/Cs/Cs';
 import { Overwatch } from './Components/Page_One/Games/Overwatch/Overwatch';
+import { Cs2 } from './Components/Page_One/Games/Cs2/Cs2';
 
 // New Router
 
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/Page_one/Valorant/:id" element={<Valorant />} />
         <Route path="/Page_one/D4" element={<D4 />} />
         <Route path="/Page_one/Cs" element={<Cs />} />
+        <Route path="/Page_one/Cs2" element={<Cs2 />} />
         <Route path="/Page_one/Overwatch" element={<Overwatch />} />
         <Route path="*" />
       </Routes>

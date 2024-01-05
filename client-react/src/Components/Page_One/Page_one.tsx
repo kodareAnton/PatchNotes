@@ -24,6 +24,10 @@ export function Page_One() {
     navigate('/Page_one/Cs');
   }
 
+  function redirectCs2() {
+    navigate('/Page_one/Cs2');
+  }
+
   function redirectOverwatch() {
     navigate('/Page_one/Overwatch');
   }
@@ -52,6 +56,15 @@ export function Page_One() {
           </div>
         </div>
         <div className="game" onClick={redirectCs}>
+          <img className="gameImg" src="img/CsGo.jpg" alt="csgo"></img>
+          <h2>CsGo</h2>
+          <p className="gameimginfo">First Person Shooter</p>
+          <div className="icon">
+            <Steam className="gameIcons" />
+          </div>
+          <p className="WIP">WIP</p>
+        </div>
+        <div className="game" onClick={redirectCs2}>
           <img className="gameImg" src="img/cs2.jpg" alt="cs2"></img>
           <h2>Cs2</h2>
           <p className="gameimginfo">First Person Shooter</p>
