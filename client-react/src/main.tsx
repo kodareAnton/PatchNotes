@@ -12,6 +12,9 @@ import './index.css';
 import { Cs } from './Components/Page_One/Games/Cs/Cs';
 import { Overwatch } from './Components/Page_One/Games/Overwatch/Overwatch';
 import { Cs2 } from './Components/Page_One/Games/Cs2/Cs2';
+import { Finals } from './Components/Page_One/Games/Finals/Finals';
+
+
 
 // New Router
 
@@ -29,6 +32,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/Page_one/Cs" element={<Cs />} />
         <Route path="/Page_one/Cs2" element={<Cs2 />} />
         <Route path="/Page_one/Overwatch" element={<Overwatch />} />
+        <Route path="/Page_one/finals" element={<Finals />} />
         <Route path="*" />
       </Routes>
       {/* <Footer /> */}

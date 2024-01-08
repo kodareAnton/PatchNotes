@@ -4,7 +4,6 @@ import './D4.css';
 
 export function D4() {
   const baseUrl = import.meta.env.VITE_REACT_APP_PATCH_NOTES_API_HOST;
-  // const baseUrl = 'https://patch-notes-server-nextjs.vercel.app/api';
 
   const [patchNotes, setPatchNotes] = useState<IPatchnotes[]>();
   console.log(patchNotes);
