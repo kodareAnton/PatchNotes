@@ -33,3 +33,5 @@ export function Cs2(){
     
     return<></>
 }
+
+export default Cs2;

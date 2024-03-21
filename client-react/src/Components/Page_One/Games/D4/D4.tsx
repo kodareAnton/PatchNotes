@@ -38,3 +38,5 @@ export function D4() {
     </div>
   );
 }
+
+export default D4;

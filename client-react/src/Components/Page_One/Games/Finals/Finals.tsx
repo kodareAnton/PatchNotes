@@ -34,3 +34,5 @@ export function Finals (){
 
   )}</>)
 }
+
+export default Finals;

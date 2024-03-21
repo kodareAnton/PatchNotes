@@ -55,3 +55,5 @@ export function Overwatch() {
     </>
   );
 }
+
+export default Overwatch;

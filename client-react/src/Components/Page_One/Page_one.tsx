@@ -143,3 +143,5 @@ export function Page_One() {
     </>
   );
 }
+
+export default Page_One;
