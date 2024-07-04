@@ -41,8 +41,7 @@ export function Overwatch() {
     console.log('patches', patches);
 
     return (
-      <div key={index}>
-        <h3>{patchnote.title}</h3>
+      <div className="stylingDiv" key={index}>
         <div dangerouslySetInnerHTML={{__html: patches?.innerHTML || ''}} />
       </div>
     );

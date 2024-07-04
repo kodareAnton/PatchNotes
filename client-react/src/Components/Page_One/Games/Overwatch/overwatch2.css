@@ -1,6 +1,28 @@
+.Blizzard{
+    color: blue;
+}
+
 .patchNotes{
     font-size: 1rem;
-    padding: 10%;
+    padding: 5%;
+}
+
+.stylingDiv{
+background-color: #00000055;  
+padding: 20px;  
+}
+
+.PatchNotes-patchTitle{
+    font-size: 2rem;
+}
+
+.PatchNotes-section{
+    margin: 20px;
+}
+
+.PatchNotes-sectionTitle{
+    font-size: large;
+    margin-bottom: 5px;
 }
 
 .PatchNotesHeroUpdate{
@@ -22,7 +44,7 @@
     border-radius: 2px;
     bottom: 8px;
     position: absolute;
-    width: 90px;
+   
 }
 
 .PatchNotesHeroUpdate-body{
