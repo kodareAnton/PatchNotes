@@ -32,6 +32,10 @@ export function Page_One() {
     navigate('/Page_one/Overwatch');
   }
 
+  function redirectFinals(){
+    navigate('/Page_one/finals')
+  }
+
   return (
     <>
       <div id="container_games">
@@ -119,8 +123,25 @@ export function Page_One() {
           </div>
           <p className="WIP">WIP</p>
         </div>
+        <div className="game" onClick={redirectFinals}>
+          <img
+            className="gameImg"
+            src="img/finals.jpg"
+            alt="finals"
+          ></img>
+          <h2>Finals</h2>
+          <p className="gameimginfo">Team-Based Action</p>
+          <div className="icon">
+            <Steam className="gameIcons" />
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
+          <p className="WIP">WIP</p>
+        </div>
       </div>
       <Footer />
     </>
   );
 }
+
+export default Page_One;

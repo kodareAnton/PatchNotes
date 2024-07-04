@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './overwatch2.css';
 
 export function Overwatch() {
   const baseUrl = import.meta.env.VITE_REACT_APP_PATCH_NOTES_API_HOST;
@@ -40,9 +41,8 @@ export function Overwatch() {
     console.log('patches', patches);
 
     return (
-      <div key={index}>
-        <h3>{patchnote.title}</h3>
-        {/* <div dangerouslySetInnerHTML={{ __html: patches?.innerHTML }} /> */}
+      <div className="stylingDiv" key={index}>
+        <div dangerouslySetInnerHTML={{__html: patches?.innerHTML || ''}} />
       </div>
     );
   });
@@ -54,3 +54,5 @@ export function Overwatch() {
     </>
   );
 }
+
+export default Overwatch;

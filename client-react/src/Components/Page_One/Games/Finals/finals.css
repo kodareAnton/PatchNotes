@@ -1,0 +1,12 @@
+.sqs-html-content{
+    padding: 30px;
+    margin: 3rem;
+    background-color: rgba(0, 0, 0, 0.655);
+    border-radius: 10px;
+}
+
+h3{
+    margin-top: 0;
+}
+
+p{font-size: small}

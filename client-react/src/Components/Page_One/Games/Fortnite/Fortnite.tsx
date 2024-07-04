@@ -54,3 +54,5 @@ export function Fortnite() {
     </>
   );
 }
+
+export default Fortnite;

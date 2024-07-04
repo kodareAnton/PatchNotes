@@ -64,3 +64,5 @@ export function Valorant() {
     </>
   );
 }
+
+export default Valorant; 

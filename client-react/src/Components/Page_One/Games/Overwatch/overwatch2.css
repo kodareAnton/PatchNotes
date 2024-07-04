@@ -1,0 +1,98 @@
+.Blizzard{
+    color: blue;
+}
+
+.patchNotes{
+    font-size: 1rem;
+    padding: 5%;
+}
+
+.stylingDiv{
+background-color: #00000055;  
+padding: 20px;  
+}
+
+.PatchNotes-patchTitle{
+    font-size: 2rem;
+}
+
+.PatchNotes-section{
+    margin: 20px;
+}
+
+.PatchNotes-sectionTitle{
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.PatchNotesHeroUpdate{
+    border: 2px solid rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    margin-top: 50px;
+    text-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+.PatchNotesHeroUpdate-header{
+    background-color: rgba(0, 0, 0, .1);
+    padding: 15px 10px;
+    position: relative;
+}
+
+.PatchNotesHeroUpdate-icon{
+    background-color: #9b9da2;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    bottom: 8px;
+    position: absolute;
+   
+}
+
+.PatchNotesHeroUpdate-body{
+    padding: 5px 20px;
+}
+
+.PatchNotesHeroUpdate-generalUpdates{
+    margin: 15px 0;
+}
+
+.PatchNotes-patch ul{
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.PatchNotesHeroUpdate-abilitiesLis{
+    margin: 15px 0;
+}
+
+.PatchNotesAbilityUpdate{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.PatchNotesAbilityUpdate-icon-container{
+    background-color: hsla(223, 4%, 62%, .5);
+    border: 2px solid hsla(0, 0%, 100%, .6);
+    border-radius: 2px;
+    height: 40px;
+    min-width: 40px;
+    padding: 5px;
+    position: relative;
+    width: 40px;
+}
+
+.PatchNotesAbilityUpdate-icon{
+    left: 50%;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.PatchNotesAbilityUpdate-text{
+    padding-left: 10px;
+}

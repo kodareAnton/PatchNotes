@@ -52,3 +52,5 @@ export function Cs() {
     </>
   );
 }
+
+export default Cs;
