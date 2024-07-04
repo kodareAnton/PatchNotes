@@ -3,7 +3,7 @@ const { parse } = require('node-html-parser');
 
 export default function handler(req, res) {
 
-  const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
+  const apiUrl = 'https://www.counter-strike.net/news/updates';
 
   // Make a GET request
   axios
@@ -14,7 +14,7 @@ export default function handler(req, res) {
 
       console.log(content);
 
-      res.json(content);
+      res.json(html);
     })
     .catch((error) => {
       // Handle any errors that occurred during the request
@@ -23,40 +23,10 @@ export default function handler(req, res) {
   }
 
   function parseHTML(html) {
-    var sendArray = [];
 
-    const root = parse(html);
-    root.querySelectorAll('.inner_post').map((inner_post) => {
-      const patchNumber = inner_post.querySelector('a').innerText;
-      const datePost = inner_post.querySelector('.post_date');
-      const imgDate = datePost.innerHTML;
+    const root = parse(html)
+    const info = root.querySelectorAll('.updatecapsule_UpdateCapsule_-Eouv')
 
-      const p = inner_post.querySelectorAll('p');
-      p[0].remove();
+    console.log(info);
 
-      const pp = p.map((p) => {
-        return p.innerText;
-      });
-
-      const newArray = splitStringArrayOnDelimiter(pp);
-      const sec = splitStringArrayOnDelimiter(newArray, '&#8211');
-
-      sendArray.push({
-        patchNumber: patchNumber,
-        csLogo: imgDate.slice(15),
-        info: pp,
-      });
-    });
-    return sendArray
-  }
-  
-  function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
-    const splitArr = [];
-  
-    strArr.forEach((ele) => {
-      const split = ele.split(delimiter);
-      splitArr.push(...split);
-    });
-  
-    return splitArr;
   }

@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
-
-
+import Borderlands3 from "./Components/Page_One/Games/Borderlands3/Borderlands3";
 
 // Lazy loading route components
 const LazyPageOne = lazy(() => import("./Components/Page_One/Page_one"));
@@ -36,6 +35,7 @@ function AppRouter() {
         <Route path="/Page_one/Cs2" element={<LazyCs2 />} />
         <Route path="/Page_one/Overwatch" element={<LazyOverwatch />} />
         <Route path="/Page_one/finals" element={<LazyFinals />} />
+        <Route path="/Page_one/Borderlands3" element={<Borderlands3 />} />
         <Route path="*" />
       </Routes>
     </Suspense>

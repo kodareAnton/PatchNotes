@@ -1,10 +1,12 @@
 const axios = require('axios');
 const { parse } = require('node-html-parser');
+const NodeCache = require('node-cache');
+const cache = new NodeCache({ stdTTL: 360000 });
 
 export default function handler(req, res) {
     const apiUrl =
     'https://news.blizzard.com/en-us/diablo4/23964909/diablo-iv-patch-notes';
-
+    
   // Make a GET request
   axios
     .get(apiUrl)
@@ -43,3 +45,25 @@ export default function handler(req, res) {
     });
   }
   
+
+  async function StoringCache(){
+    const cacheKey = 'my-api-data';
+
+  // Try to get data from cache
+  let data = cache.get(cacheKey);
+
+  if (data) {
+    return res.status(200).json(data);
+  }
+  // If not in cache, fetch from API
+  try {
+    const response = await fetch('https://news.blizzard.com/en-us/diablo4/23964909/diablo-iv-patch-notes');
+    data = await response.json();
+
+    // Store the data in cache
+    cache.set(cacheKey, data);
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+  }
