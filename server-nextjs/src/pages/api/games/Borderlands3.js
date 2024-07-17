@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { parse } = require('node-html-parser');
 
 export default function handler(req, res){
     const apiUrl = "https://mentalmars.com/guides/maurices-black-market-location-guide-borderlands-3/"
@@ -21,7 +22,8 @@ export default function handler(req, res){
 function parseHTML(html) {
 
     const root = parse(html)
-    const info = root.querySelectorAll('')
+    const info = root.querySelectorAll('.gp-entry-content')
+
 
     console.log(info);
 

@@ -42,7 +42,7 @@ export function Page_One() {
 
   return (
     <>
-      <div id="container_games">
+      <div className="container_games">
         <div className="game" onClick={redirectD4}>
           {/* <img className="gameImgOverlay" src="img/diablo4-logo.webp"></img> */}
           <img className="gameImg" src="img/diablo4.jpg" alt="diablo4"></img>
@@ -106,27 +106,6 @@ export function Page_One() {
           </div>
           <p className="WIP">WIP</p>
         </div>
-        <div className="game" onClick={redirectFortnite}>
-          <img className="gameImg" src="img/fortnite.png" alt="Fortnite"></img>
-          <h2>Fortnite</h2>
-          <p className="gameimginfo">Battle royale</p>
-          <div className="icon">
-            <Xbox className="gameIcons" />
-            <Playstation className="gameIcons" />
-          </div>
-          <p className="WIP">WIP</p>
-        </div>
-        <div className="game" onClick={redirectValorant}>
-          <img className="gameImg" src="img/valorant.jpg" alt="valorant"></img>
-          <h2>Valorant</h2>
-          <p className="gameimginfo">Hero/Tactical shooter</p>
-          <div className="icon">
-            <Steam className="gameIcons" />
-            <Xbox className="gameIcons" />
-            <Playstation className="gameIcons" />
-          </div>
-          <p className="WIP">WIP</p>
-        </div>
         <div className="game" onClick={redirectFinals}>
           <img
             className="gameImg"
@@ -143,8 +122,8 @@ export function Page_One() {
           <p className="WIP">WIP</p>
         </div>
       </div>
-
-      <div><h1>Other Stuff</h1>
+      <h1>Other Stuff</h1>
+      <div className='container_games'>
       <div className="game" onClick={redirectBorderlands}>
           <img
             className="gameImg"
@@ -161,7 +140,29 @@ export function Page_One() {
             <Playstation className="gameIcons" />
           </div>
           <p className="WIP">WIP</p>
-        </div></div>
+        </div>
+        <div className="game" onClick={redirectValorant}>
+          <img className="gameImg" src="img/valorant.jpg" alt="valorant"></img>
+          <h2>Valorant</h2>
+          <p className="gameimginfo">Hero/Tactical shooter</p>
+          <div className="icon">
+            <Steam className="gameIcons" />
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
+          <p className="WIP">WIP</p>
+        </div>
+        <div className="game" onClick={redirectFortnite}>
+          <img className="gameImg" src="img/fortnite.png" alt="Fortnite"></img>
+          <h2>Fortnite</h2>
+          <p className="gameimginfo">Battle royale</p>
+          <div className="icon">
+            <Xbox className="gameIcons" />
+            <Playstation className="gameIcons" />
+          </div>
+          <p className="WIP">WIP</p>
+        </div>
+        </div>
       <Footer />
     </>
   );

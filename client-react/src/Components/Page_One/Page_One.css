@@ -1,4 +1,4 @@
-#container_games {
+.container_games {
   display: flex;
   flex-wrap: wrap;
 }
@@ -89,7 +89,7 @@ h2 {
     margin: 0;
   }
 
-  #container_games {
+  .container_games {
     justify-content: center;
   }
 
