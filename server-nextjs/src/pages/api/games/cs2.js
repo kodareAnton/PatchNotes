@@ -1,62 +1,53 @@
 const axios = require('axios');
 const { parse } = require('node-html-parser');
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
+  const apiUrl = 'https://www.counter-strike.net/news/updates';
 
-  const apiUrl = 'https://blog.counter-strike.net/index.php/category/updates/';
+  try {
+    // Make a GET request
+    const response = await axios.get(apiUrl);
+    const html = response.data;
 
-  // Make a GET request
-  axios
-    .get(apiUrl)
-    .then((response) => {
-      const html = response.data;
-      const content = parseHTML(html);
+    // Log the fetched HTML
+    console.log(html);
 
-      console.log(content);
+    const content = parseHTML(html);
 
-      res.json(content);
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during the request
-      console.error('Error:', error);
-    });
+    console.log(content);
+
+    res.json(html);
+  } catch (error) {
+    // Handle any errors that occurred during the request
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
   }
+}
 
-  function parseHTML(html) {
-    var sendArray = [];
+function parseHTML(html) {
+  const root = parse(html);
 
-    const root = parse(html);
-    root.querySelectorAll('.inner_post').map((inner_post) => {
-      const patchNumber = inner_post.querySelector('a').innerText;
-      const datePost = inner_post.querySelector('.post_date');
-      const imgDate = datePost.innerHTML;
+  // Verify the correct selector by inspecting the HTML structure
+  const updatesBox = root.querySelectorAll('.blogoverviewpage_SubUpdates_31uv5');
 
-      const p = inner_post.querySelectorAll('p');
-      p[0].remove();
+  // Log the updatesBox to check if elements are selected
+  console.log('updatesBox:', updatesBox);
 
-      const pp = p.map((p) => {
-        return p.innerText;
-      });
+  const extractedHTML = [];
 
-      const newArray = splitStringArrayOnDelimiter(pp);
-      const sec = splitStringArrayOnDelimiter(newArray, '&#8211');
+  // updatesBox.forEach((update, index) => {
+  //   // Log each update to inspect its structure
+  //   console.log(`Update ${index}:`, update.toString());
 
-      sendArray.push({
-        patchNumber: patchNumber,
-        csLogo: imgDate.slice(15),
-        info: pp,
-      });
-    });
-    return sendArray
-  }
-  
-  function splitStringArrayOnDelimiter(strArr, delimiter = '\n') {
-    const splitArr = [];
-  
-    strArr.forEach((ele) => {
-      const split = ele.split(delimiter);
-      splitArr.push(...split);
-    });
-  
-    return splitArr;
-  }
+  //   const dateElement = update.querySelector('.updatecapsule_Title_13NfC');
+  //   const date = dateElement ? dateElement.textContent : 'No date found';
+
+  //   const dataList = {
+  //     date: date,
+  //   };
+
+  //   extractedHTML.push(dataList);
+  // });
+
+  return updatesBox;
+}

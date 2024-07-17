@@ -1,4 +1,4 @@
-#container_games {
+.container_games {
   display: flex;
   flex-wrap: wrap;
 }
@@ -70,6 +70,14 @@ h2 {
   border-radius: 10px;
 }
 
+#blackMarket{
+  background-image: radial-gradient(circle at 10% 20%, rgb(251, 144, 6) 0%, rgb(252, 251, 121) 90%);
+  background-image: gradient( radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 @media screen and (min-width: 500px) {
   .gameImg {
     height: 300px;
@@ -81,7 +89,7 @@ h2 {
     margin: 0;
   }
 
-  #container_games {
+  .container_games {
     justify-content: center;
   }
 

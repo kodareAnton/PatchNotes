@@ -9,7 +9,7 @@ export const fetchDataSingleton = {
     while (true) {
       console.log("24 hours");
       this.finalsData = this.fetchFinals();
-      await new Promise((_) => setTimeout(_, 100000));
+      await new Promise((_) => setTimeout(_, 1000000000));
     }
   },
 
